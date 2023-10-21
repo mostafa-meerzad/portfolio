@@ -6,6 +6,22 @@
   body {
     @apply bg-dark-gray;
     @apply text-white;
-    @apply max-sm:px-5;
   }
+}
+
+@layer components {
+  .desc {
+    @apply text-gray-300;
+  }
+
+  .container {
+    @apply max-sm:px-4;
+  }
+
+  .before-after {
+    @apply before:absolute before:w-[93%] before:h-0.5 before:top-0 before:bg-gray-400 before:rounded-md;
+    @apply after:absolute after:w-[93%] after:h-0.5 after:bottom-0 after:bg-gray-400 after:rounded-md;
+  }
+
+ 
 }
