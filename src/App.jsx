@@ -1,12 +1,14 @@
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
+import Technologies from "./sections/Technologies";
 
 const App = () => {
   return (
     <>
-      <main>
+      <main className="">
         <Hero />
+        <Technologies/>
         <Projects />
       </main>
       <footer>
