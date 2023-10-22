@@ -6,9 +6,11 @@ export default {
       colors: {
         "dark-gray": "#151515",
       },
-      fontFamily:{
-        "News":"font-family: 'News Cycle', sans-serif"
-      }
+      fontFamily: {
+        arvo: ["Arvo", "serif"],
+        playpen: ["Playpen Sans", "cursive"],
+        news: ["News Cycle", "sans-serif"],
+      },
     },
   },
   plugins: [],
