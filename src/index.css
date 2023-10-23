@@ -23,5 +23,11 @@
     @apply after:absolute after:w-[93%] after:h-0.5 after:bottom-0 after:bg-gray-400 after:rounded-md;
   }
 
- 
+  .hide-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
 }
