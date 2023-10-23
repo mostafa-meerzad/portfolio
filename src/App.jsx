@@ -6,7 +6,7 @@ import Technologies from "./sections/Technologies";
 const App = () => {
   return (
     <>
-      <main className="">
+      <main className="overflow-x-hidden">
         <Hero />
         <Technologies/>
         <Projects />

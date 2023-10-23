@@ -4,7 +4,7 @@ import { projects } from "../data";
 
 const Projects = () => {
   return (
-    <section className="container my-24 relative">
+    <section className="container mt-24 relative">
       <Rings
         className={"absolute -top-[5%] -right-[45%] scale-105 opacity-70 -z-10"}
       />
