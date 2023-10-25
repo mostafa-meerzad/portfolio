@@ -5,7 +5,28 @@ const Link = ({ href, text }) => {
     <a
       href={href}
       className="text-sm font-medium font-News relative
-      after:absolute after:w-full after:h-[2px] after:bg-green-400  after:-bottom-2 after:left-0 after:rounded-lg"
+      
+      after:absolute after:w-full after:h-[2px] 
+      before:absolute before:w-full before:h-[2px]
+      
+      after:bg-gradient-to-r after:from-[#EA0406] after:to-[#8905E4]  
+      before:bg-gradient-to-r from-[#8905E4] to-[#EA0406] 
+      
+      after:-bottom-2 after:left-0 after:rounded-lg 
+      after:opacity-100
+
+      before:-bottom-2 before:left-0 before:rounded-lg 
+      before:opacity-0
+      
+      after:hover:opacity-0
+      before:hover:opacity-100
+
+
+
+      before:transition-all before:ease-in-out   before:duration-700
+      after:transition-all after:ease-in-out   after:duration-700
+      
+      "
     >
       {text}
     </a>
