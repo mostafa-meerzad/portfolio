@@ -3,7 +3,10 @@ import { technologies } from "../data";
 
 const Technologies = () => {
   return (
-    <section className="mt-12 container flex flex-col items-center hide-scroll gap-12  py-12 relative before-after">
+    <section className=" container flex flex-col items-center gap-12 my-8  relative hide-scroll 
+  
+    ">
+      
       {technologies.map((tech) => (
         <div key={tech} className="w-max flex flex-col gap-12  text-center ">
           <Tech title={tech[0]} />

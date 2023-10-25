@@ -19,10 +19,6 @@
     @apply md:px-12;
   }
 
-  .before-after {
-    @apply before:absolute before:w-[93%] before:h-0.5 before:top-0 before:bg-gray-400 before:rounded-md;
-    @apply after:absolute after:w-[93%] after:h-0.5 after:bottom-0 after:bg-gray-400 after:rounded-md;
-  }
 
   .hide-scroll {
     -ms-overflow-style: none;
