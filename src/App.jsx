@@ -10,7 +10,7 @@ const App = () => {
         <Hero />
         <hr className="w-[93%] h-[2px] bg-gray-400 my-12 " />
         <Technologies />
-        <hr className="w-[93%] h-[2px] bg-gray-400 my-12 " />
+        <hr className="w-[93%] h-[2px] bg-gray-400 my-12 md:hidden" />
         <Projects />
       </main>
       <footer>

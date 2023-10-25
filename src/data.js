@@ -2,11 +2,12 @@ import { img1, img2, img3, img4, img5, img6 } from "./assets/images";
 import { linkedin, github, frontendmentor } from "./assets/icons";
 
 const technologies = [
-  ["html", "css"],
-  ["javascript", "react"],
-  ["gsap", "tailwindcss"],
-  ["styled-components", "react router dom"],
-  ["framer-motion", "react hook form"],
+  "html", "css"
+  ,"javascript", "react"
+  ,"gsap", "tailwindcss"
+  ,"styled-components", "react router dom"
+  ,"framer-motion", "react hook form",
+  "git"
 ];
 
 const projects = [
