@@ -5,7 +5,9 @@ const Technologies = () => {
   return (
     <section
       className="grid justify-items-center gap-10
-      md:grid-rows-3 md:grid-flow-col  w-11/12 md:overflow-x-scroll md:justify-items-start md:mb-12 p-1 hide-scroll "
+      md:grid-rows-2 md:grid-flow-col   md:overflow-x-scroll md:justify-items-start md:mb-14 hide-scroll 
+      w-full wrapper
+       "
     >
       {technologies.map((tech) => (
         <div key={tech} className="w-max flex flex-col gap-12  text-center ">

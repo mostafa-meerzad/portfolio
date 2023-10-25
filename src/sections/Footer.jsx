@@ -2,7 +2,7 @@ import { socialMediaLinks } from "../data";
 
 const Footer = () => {
   return (
-    <section className="container pt-8 pb-4 bg-slightly-dark-gray text-center md:text-start relative">
+    <section className="wrapper pt-8 pb-4 bg-slightly-dark-gray text-center md:text-start relative">
       <h2 className="text-3xl ">Contact</h2>
       <p className="text-gray-300 md:max-w-sm">
         I would love to hear about your project and how i could help.

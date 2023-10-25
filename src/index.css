@@ -14,8 +14,8 @@
     @apply text-gray-300;
   }
 
-  .container {
-    @apply max-sm:px-4;
+  .wrapper {
+    @apply sm:px-4;
     @apply md:px-12;
   }
 

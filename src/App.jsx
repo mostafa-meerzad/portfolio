@@ -6,14 +6,14 @@ import Technologies from "./sections/Technologies";
 const App = () => {
   return (
     <>
-      <main className="overflow-x-hidden flex flex-col items-center">
+      <main className="overflow-x-hidden flex flex-col items-center ">
         <Hero />
-        <hr className="w-[93%] h-[2px] bg-gray-400 my-12 " />
+        <hr className="w-[95%] h-[2px] bg-gray-400 mt-20 mb-12   " />
         <Technologies />
-        <hr className="w-[93%] h-[2px] bg-gray-400 my-12 md:hidden" />
+        <hr className="w-[95%] h-[2px] bg-gray-400 my-12 md:hidden" />
         <Projects />
       </main>
-      <footer>
+      <footer >
         <Footer />
       </footer>
     </>
