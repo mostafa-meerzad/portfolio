@@ -16,6 +16,7 @@
 
   .container {
     @apply max-sm:px-4;
+    @apply md:px-12;
   }
 
   .before-after {
@@ -29,5 +30,15 @@
   }
   .hide-scroll::-webkit-scrollbar {
     display: none;
+  }
+
+  .style {
+    /* box-shadow: 208px 13px 137px -24px #EA0406, 472px 153px 160px -4px #8905E4; */
+    box-shadow:208px 13px 137px -36px #EA0406, 472px 153px 160px -19px #8905E4;
+    /* background-color: red !important; */
+    width: 100px !important;
+    height: 300px !important;
+    left: -100px !important;
+    z-index: -1 !important;
   }
 }
