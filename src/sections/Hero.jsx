@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="flex flex-col items-center  w-full relative md:flex-row max-lg:pr-0  wrapper ">
       <img
-        className=" max-sm:w-2/3 sm:w-1/2 md:order-2 max-md:m-auto max-lg:ml-auto"
+        className=" max-sm:w-2/3 sm:w-1/2 md:order-2 max-md:m-auto max-lg:ml-auto lg:w-[45%]"
         src={mainImg}
         alt="Mostafa-image"
       />
@@ -15,7 +15,7 @@ const Hero = () => {
       />
 
       <div className="mt-8 md:w-[60%] max-md:relative max-lg:absolute">
-        <h1 className="font-News text-[2.5rem] leading-10  text-center md:text-start md:text-[3.5rem] md:leading-[3.8rem] md:mb-8">
+        <h1 className="font-News text-[2.7rem] leading-10  text-center md:text-start md:text-[3.5rem] md:leading-[3.8rem] md:mb-8">
           <span>Nice to meet you!</span>
           <br />
           <span>
@@ -23,7 +23,7 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-center mt-4 desc max-w-sm md:text-start md:text-lg">
+        <p className="text-center mt-4 desc max-md:max-w-sm md:text-start md:text-md md:w-2/3 lg:text-lg lg:max-w-md lg:leading-6">
           I&apos;m a front-end developer passionate about building accessible
           web apps that users love.
         </p>

@@ -35,8 +35,8 @@ const Link = ({ href, text }) => {
 
 const Project = ({ name, imgUrl, liveUrl, sourceUrl, techs }) => {
   return (
-    <div className="my-12">
-      <img src={imgUrl} alt={name} className="mb-4" loading="lazy" />
+    <div className="my-12 lg:my-4 object-contain">
+      <img src={imgUrl} alt={name} className="mb-4 h-4/5" loading="lazy" />
       <h3 className="text-2xl font-medium uppercase font-playpen">{name}</h3>
       <ul className="flex gap-4 uppercase my-1">
         {techs.map((tech) => (

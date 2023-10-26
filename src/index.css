@@ -15,8 +15,9 @@
   }
 
   .wrapper {
-    @apply sm:px-4;
+    @apply max-md:px-4;
     @apply md:px-12;
+    @apply lg:px-24 ;
   }
 
 
