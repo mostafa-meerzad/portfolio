@@ -1,3 +1,5 @@
+import PropTypes from "prop-types"
+
 const Rings = ({className}) => {
   return (
     <svg className={className}
@@ -30,4 +32,6 @@ const Rings = ({className}) => {
     </svg>
   );
 };
+
+Rings.propTypes = {className:PropTypes.string}
 export default Rings;

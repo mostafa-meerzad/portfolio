@@ -1,4 +1,4 @@
-// import { PropTypes } from "react";
+import  PropTypes  from "prop-types";
 const Circle = ({className}) => {
   return (
     <svg className={className}
@@ -13,5 +13,5 @@ const Circle = ({className}) => {
   );
 };
 
-// Circle.propTypes = {className: PropTypes.string};
+Circle.propTypes = {className: PropTypes.string};
 export default Circle;
