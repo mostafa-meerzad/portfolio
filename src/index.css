@@ -3,23 +3,40 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: Posterama;
+    src: url("./assets/fonts/Posterama/WebFonts/ea250342ec4016561ba9e791c2f39c11.eot")
+      format("eot");
+    src: url("./assets/fonts/Posterama/WebFonts/ea250342ec4016561ba9e791c2f39c11.ttf")
+      format("ttf");
+    src: url("./assets/fonts/Posterama/WebFonts/ea250342ec4016561ba9e791c2f39c11.woff")
+      format("woff");
+    src: url("./assets/fonts/Posterama/WebFonts/ea250342ec4016561ba9e791c2f39c11.woff2")
+      format("woff2");
+  }
+
+  @font-face {
+    font-family: Nexa;
+    src: url("./assets/fonts/Nexa/Nexa-ExtraLight.ttf") format("ttf");
+    src: url("./assets/fonts/Nexa/Nexa-Heavy.ttf") format("ttf");
+  }
+
   body {
-    @apply bg-dark-gray;
-    @apply text-white;
+    color: whitesmoke;
+    background-color: #0b1120;
   }
 }
 
 @layer components {
   .desc {
-    @apply text-gray-300;
+    @apply text-gray-400;
   }
 
   .wrapper {
     @apply max-md:px-4;
     @apply md:px-12;
-    @apply lg:px-24 ;
+    @apply lg:px-24;
   }
-
 
   .hide-scroll {
     -ms-overflow-style: none;
@@ -29,13 +46,62 @@
     display: none;
   }
 
-  .style {
-    /* box-shadow: 208px 13px 137px -24px #EA0406, 472px 153px 160px -4px #8905E4; */
-    box-shadow:208px 13px 137px -36px #EA0406, 472px 153px 160px -19px #8905E4;
-    /* background-color: red !important; */
-    width: 100px !important;
-    height: 300px !important;
-    left: -100px !important;
-    z-index: -1 !important;
+  .bg-shadow {
+    position: relative;
+  }
+  .bg-shadow::before {
+    transform: rotate(29deg);
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 20rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    animation-name: shadow;
+    animation-duration: 3500ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    z-index: -1;
+  }
+
+  .bg-shadow-desktop::before {
+    transform: rotate(-30deg);
+    animation-name: shadow-desktop;
+    animation-duration: 5000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shadow {
+    0%,
+    100% {
+      /* box-shadow: -10vmin -1vmin 98px 11px #ff0095, */
+      /* 18vmin 20vmin 104px 14px #00a9ff; */
+      box-shadow: -80px -20px 98px 11px #ff0095, 140px 140px 104px 14px #00a9ff;
+    }
+    50% {
+      /* box-shadow: -10vmin -1vmin 78px 11px #ff0095, */
+      /* 18vmin 20vmin 104px 10px #00a9ff; */
+
+      box-shadow: -80px -20px 78px 11px #ff0095, 140px 140px 104px 10px #00a9ff;
+    }
+  }
+  @keyframes shadow-desktop {
+    0%,
+    100% {
+      /* box-shadow: -10vmin -1vmin 98px 11px #ff0095, */
+      /* 18vmin 20vmin 104px 14px #00a9ff; */
+
+      box-shadow: -200px -60px 170px 11px #ff009599,
+        100px 280px 160px 14px #00a9ff99;
+    }
+    50% {
+      /* box-shadow: -10vmin -1vmin 78px 11px #ff0095, */
+      /* 18vmin 20vmin 104px 10px #00a9ff; */
+
+      box-shadow: -200px -60px 150px 5px #ff009599,
+        100px 280px 190px 6px #00a9ff99;
+    }
   }
 }

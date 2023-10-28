@@ -10,7 +10,9 @@ export default {
       fontFamily: {
         arvo: ["Arvo", "serif"],
         playpen: ["Playpen Sans", "cursive"],
-        news: ["News Cycle", "sans-serif"],
+        News: ["News Cycle", "sans-serif"],
+        Posterama: ["Posterama", "sans"],
+        Nexa:["Nexa", "sans-serif"]
       },
     },
   },
