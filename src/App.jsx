@@ -6,7 +6,7 @@ import Technologies from "./sections/Technologies";
 const App = () => {
   return (
     <>
-      <main className="overflow-x-hidden flex flex-col items-center max-w-screen-2xl mx-auto">
+      <main className=" flex flex-col items-center max-w-screen-2xl mx-auto">
         <Hero />
         <hr className="w-[95%] h-[2px] bg-gray-400 mt-20 mb-12   " />
         <Technologies />
