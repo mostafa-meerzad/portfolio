@@ -6,6 +6,9 @@ const Technologies = () => {
     <section
       className="grid gap-x-12 gap-y-4 grid-rows-3 grid-flow-col w-full overflow-x-auto hide-scroll px-8 my-12
       md:px-12
+      lg:px-36
+      lg:text-2xl
+      lg:grid-rows-2
        "
     >
       {technologies.map((tech) => (

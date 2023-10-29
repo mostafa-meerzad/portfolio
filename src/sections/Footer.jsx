@@ -2,7 +2,7 @@ import { socialMediaLinks } from "../data";
 
 const Footer = () => {
   return (
-    <section className="flex flex-col items-center text-center gap-8 px-4 py-8 md:flex-row md:justify-between md:text-start">
+    <section className="w-full flex flex-col items-center text-center gap-8 px-4 py-8 md:flex-row md:justify-between md:text-start md:px-12 lg:px-24">
       <div className="md:w-1/2">
         <h2 className="text-3xl ">Contact</h2>
         <p className="mt-2">

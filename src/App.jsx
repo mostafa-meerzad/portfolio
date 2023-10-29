@@ -8,13 +8,12 @@ const App = () => {
     <>
       <main className=" flex flex-col items-center max-w-screen-2xl mx-auto">
         <Hero />
-        <hr className="w-[95%] h-[.5px] bg-gray-400 opacity-50 mt-20    " />
+        <hr className="w-[95%] h-[.5px] bg-gray-400 mt-20  opacity-30 " />
         <Technologies />
-        {/* <hr className="w-[95%] h-[1px] bg-gray-400 opacity-50 my-12 md:hidden" /> */}
         <Projects />
       </main>
       <footer className="flex flex-col items-center max-w-screen-2xl m-auto mt-12">
-        <hr className="w-[95%] h-[.5px] bg-gray-400 opacity-50 " />
+        <hr className="w-[95%] h-[.5px] bg-gray-400 opacity-30 " />
         <Footer />
       </footer>
     </>
