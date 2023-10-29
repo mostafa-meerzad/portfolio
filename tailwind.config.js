@@ -5,7 +5,8 @@ export default {
     extend: {
       colors: {
         "dark-gray": "#151515",
-        "slightly-dark-gray":"#242424"
+        "slightly-dark-gray":"#242424",
+        "dark-blue": "#0b1120",
       },
       fontFamily: {
         arvo: ["Arvo", "serif"],

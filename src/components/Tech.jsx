@@ -1,7 +1,12 @@
 import PropTypes from "prop-types";
+
 const Tech = ({ title }) => {
-  return <span className="text-4xl md:text-3xl">{title}</span>;
+  return (
+    <p className="text-xl text-gray-300 capitalize whitespace-nowrap ">
+      {title}
+    </p>
+  );
 };
 
-Tech.propTypes = {title: PropTypes.string}
+Tech.propTypes = { title: PropTypes.string };
 export default Tech;
