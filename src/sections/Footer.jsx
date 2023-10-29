@@ -2,13 +2,15 @@ import { socialMediaLinks } from "../data";
 
 const Footer = () => {
   return (
-    <section className="wrapper pt-8 pb-4 bg-slightly-dark-gray text-center md:text-start relative lg:py-8 ">
-      <h2 className="text-3xl ">Contact</h2>
-      <p className="text-gray-300 md:max-w-sm lg:max-w-fit">
-        I would love to hear about your project and how i could help.
-      </p>
+    <section className="flex flex-col items-center text-center gap-8 px-4 py-8 ">
+      <div>
+        <h2 className="text-3xl ">Contact</h2>
+        <p className="mt-2">
+          I would love to hear about your project and how i could help.
+        </p>
+      </div>
 
-      <ul className="flex justify-center items-center gap-4 mt-8 mb-4 md:absolute md:right-12 bottom-0 md:top-0 md:gap-8">
+      <ul className="flex gap-8">
         {socialMediaLinks.map(({ name, img, url }) => (
           <li key={name}>
             <a href={url}>
