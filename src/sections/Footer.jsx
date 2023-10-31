@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { socialMediaLinks } from "../data";
 
 const Footer = () => {
@@ -12,11 +13,11 @@ const Footer = () => {
 
       <ul className="flex gap-8">
         {socialMediaLinks.map(({ name, img, url }) => (
-          <li key={name}>
+          <motion.li key={name} whileHover={{scale:1.2}}>
             <a href={url}>
               <img src={img} alt={name} className="w-8" />
             </a>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </section>

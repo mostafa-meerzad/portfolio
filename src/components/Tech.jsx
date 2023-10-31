@@ -1,10 +1,11 @@
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-const Tech = ({ title }) => {
+const Tech = ({ title, ...args }) => {
   return (
-    <p className="text-xl text-gray-300 capitalize whitespace-nowrap ">
+    <motion.p className="text-xl text-gray-300 capitalize whitespace-nowrap cursor-default select-none" {...args}>
       {title}
-    </p>
+    </motion.p>
   );
 };
 
