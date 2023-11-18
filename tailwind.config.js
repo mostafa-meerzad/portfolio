@@ -12,9 +12,6 @@ export default {
         "pattern":"url('/bg.png')"
       },
       fontFamily: {
-        arvo: ["Arvo", "serif"],
-        playpen: ["Playpen Sans", "cursive"],
-        News: ["News Cycle", "sans-serif"],
         Posterama: ["Posterama", "sans"],
         Nexa:["Nexa", "sans-serif"]
       },

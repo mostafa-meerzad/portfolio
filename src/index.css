@@ -76,30 +76,19 @@
   @keyframes shadow {
     0%,
     100% {
-      /* box-shadow: -10vmin -1vmin 98px 11px #ff0095, */
-      /* 18vmin 20vmin 104px 14px #00a9ff; */
       box-shadow: -80px -20px 98px 11px #ff0095, 140px 140px 104px 14px #00a9ff;
     }
     50% {
-      /* box-shadow: -10vmin -1vmin 78px 11px #ff0095, */
-      /* 18vmin 20vmin 104px 10px #00a9ff; */
-
       box-shadow: -80px -20px 78px 11px #ff0095, 140px 140px 104px 10px #00a9ff;
     }
   }
   @keyframes shadow-desktop {
     0%,
     100% {
-      /* box-shadow: -10vmin -1vmin 98px 11px #ff0095, */
-      /* 18vmin 20vmin 104px 14px #00a9ff; */
-
       box-shadow: -200px -60px 170px 11px #ff009599,
         100px 280px 160px 14px #00a9ff99;
     }
     50% {
-      /* box-shadow: -10vmin -1vmin 78px 11px #ff0095, */
-      /* 18vmin 20vmin 104px 10px #00a9ff; */
-
       box-shadow: -200px -60px 150px 5px #ff009599,
         100px 280px 190px 6px #00a9ff99;
     }
