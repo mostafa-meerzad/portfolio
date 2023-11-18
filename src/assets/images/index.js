@@ -1,10 +1,11 @@
-import img1 from "./IrFMpUu.jpg";
-import img2 from "./iswanto-arif-OJ74pFtrYi0-unsplash.jpg";
-import img3 from "./joshua-earle-XnDQ9uXILRE-unsplash.jpg";
-import img4 from "./kevin-schmid-zdsMxyby0nE-unsplash.jpg";
-import img5 from "./lucas-benjamin-R79qkPYvrcM-unsplash.jpg";
-import img6 from "./lucas-benjamin-wQLAGv4_OYs-unsplash.jpg";
-import main from "./main.png";
+import adviceGenerator from  "./adviceGenerator.png"
+import ageCalculator from "./ageCalculator.png"
+import bookmark from "./bookmark.png"
+import makeMoney from "./makeMoney.png"
+import main from "./main.png"
+import multiStepForm from "./multiStepForm.png"
+import restCountries from "./restCountries.png"
+import room from "./room.png"
+import todoApp from "./todoApp.png"
 
-
-export {img1,img2,img3,img4,img5,img6, main}
+export {adviceGenerator, ageCalculator, bookmark, makeMoney, main, multiStepForm, restCountries, todoApp, room}

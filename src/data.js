@@ -1,4 +1,4 @@
-import { img1, img2, img3, img4, img5, img6 } from "./assets/images";
+import { makeMoney, adviceGenerator, ageCalculator, bookmark, multiStepForm, restCountries, room, todoApp } from "./assets/images";
 import { linkedin, github, frontendmentor } from "./assets/icons";
 
 const technologies = [
@@ -18,46 +18,67 @@ const technologies = [
 
 const projects = [
   {
-    name: "project 1",
-    techs: ["html", "css", "js"],
-    liveUrl: "#",
-    sourceUrl: "#",
-    imgUrl: img1,
+    name: "Make Money",
+    techs: ["html","css", "Scss"],
+    liveUrl: "https://creative-donut-2173d1.netlify.app/",
+    sourceUrl: "https://github.com/mostafa-meerzad/make-money.git",
+    imgUrl: makeMoney,
   },
   {
-    name: "project 2",
-    techs: ["react", "styled-components", "gsap"],
-    liveUrl: "#",
-    sourceUrl: "#",
-    imgUrl: img2,
+    name: "BookMark Landing Page",
+    techs: ["react", "tailwindcss"],
+    liveUrl: "https://venerable-truffle-808fa6.netlify.app/",
+    sourceUrl: "https://github.com/mostafa-meerzad/bookmark-landing-page.git",
+    imgUrl: bookmark,
   },
   {
-    name: "project 3",
-    techs: ["html", "axios", "js"],
-    liveUrl: "#",
-    sourceUrl: "#",
-    imgUrl: img3,
+    name: "Room Home Page",
+    techs: ["react", "scss", "framer-motion", "react-router-dom"],
+    liveUrl: "https://gorgeous-kelpie-3e3426.netlify.app/",
+    sourceUrl: "https://github.com/mostafa-meerzad/room-homepage.git",
+    imgUrl: room,
   },
   {
-    name: "project 4",
-    techs: ["react", "tailwind"],
-    liveUrl: "#",
-    sourceUrl: "#",
-    imgUrl: img4,
+    name: "Todo App",
+    techs: ["react", "redux", "framer-motion", "styled-components"],
+    liveUrl: "https://bejewelled-dragon-8d6018.netlify.app/",
+    sourceUrl: "https://github.com/mostafa-meerzad/todo-app.git",
+    imgUrl: todoApp,
   },
   {
-    name: "project 5",
-    techs: ["html", "scss", "js"],
-    liveUrl: "#",
-    sourceUrl: "#",
-    imgUrl: img5,
+    name: "Age Calculator",
+    techs: ["react", "scss", "react-hook-form", "gsap"],
+    liveUrl: "https://654cd4a7ca6cbf3dfc9954ee--friendly-narwhal-772d56.netlify.app/",
+    sourceUrl: "https://github.com/mostafa-meerzad/age-calculator.git",
+    imgUrl: ageCalculator,
+  },
+  // {
+  //   name: "ip address tracker",
+  //   techs: ["react", "scss", "framer-motion"],
+  //   liveUrl: "https://lovely-alfajores-9458cf.netlify.app/",
+  //   sourceUrl: "https://github.com/mostafa-meerzad/ip-address-tracker.git",
+  //   imgUrl: ipAddressTracker,
+  // },
+  {
+    name: "Advice Generator",
+    techs: ["react", "scss", "framer-motion"],
+    liveUrl: "https://clinquant-tarsier-161c51.netlify.app/",
+    sourceUrl: "https://github.com/mostafa-meerzad/advice-generator.git",
+    imgUrl: adviceGenerator,
   },
   {
-    name: "project 6",
-    techs: ["react", "css", "framer-motion"],
-    liveUrl: "#",
-    sourceUrl: "#",
-    imgUrl: img6,
+    name: "Rest Countries",
+    techs: ["react", "tailwindcss", "framer-motion"],
+    liveUrl: "https://bespoke-tarsier-7a35bf.netlify.app",
+    sourceUrl: "https://github.com/mostafa-meerzad/rest-countries.git",
+    imgUrl: restCountries,
+  },
+  {
+    name: "multi-step form",
+    techs: ["react", "react-hook-form", "scss", "framer-motion"],
+    liveUrl: "https://65474dc917130a24e7ac7ab8--joyful-hummingbird-5544d6.netlify.app/",
+    sourceUrl: "https://github.com/mostafa-meerzad/multi-step-form.git",
+    imgUrl: multiStepForm,
   },
 ];
 
