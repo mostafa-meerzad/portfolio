@@ -68,7 +68,7 @@ const projects = [
   },
   {
     name: "Rest Countries",
-    techs: ["react", "tailwindcss", "framer-motion"],
+    techs: ["react", "tailwindcss", "framer-motion", "axios"],
     liveUrl: "https://bespoke-tarsier-7a35bf.netlify.app",
     sourceUrl: "https://github.com/mostafa-meerzad/rest-countries.git",
     imgUrl: restCountries,
