@@ -97,15 +97,15 @@ const socialMediaLinks = [
 ];
 
 const frontendTechIcons = [
-  {name:"html", img:html},
-  {name:"css", img:css},
-  {name:"javascript", img:js},
-  {name:"react", img:react},
+  {name:"Html", img:html},
+  {name:"Css", img:css},
+  {name:"Javascript", img:js},
+  {name:"React Js", img:react},
 ]
 
 const backendTechIcons = [
-  {name: "nodejs", img:node},
-  {name: "express", img:express},
-  {name: "mongodb", img:mongodb},
+  {name: "nodeJs", img:node},
+  {name: "Express Js", img:express},
+  {name: "Mongodb", img:mongodb},
 ]
 export { technologies, projects, socialMediaLinks, frontendTechIcons, backendTechIcons };
