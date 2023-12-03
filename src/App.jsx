@@ -1,3 +1,4 @@
+import AboutMe from "./sections/AboutMe";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
@@ -11,6 +12,7 @@ const App = () => {
         <hr className="w-[95%] h-[.5px] bg-gray-400 mt-20  opacity-30 " />
         <Technologies />
         <Projects />
+        <AboutMe/>
       </main>
       <footer className="flex flex-col items-center max-w-screen-2xl m-auto mt-12">
         <hr className="w-[95%] h-[.5px] bg-gray-400 opacity-30 " />
