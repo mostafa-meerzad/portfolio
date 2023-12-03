@@ -3,7 +3,7 @@ import TechIcon from "../components/TechIcon";
 
 const AboutMe = () => {
   return (
-    <div className="px-4 md:px-12 lg:px-24 ">
+    <div className="px-4 text-center md:px-12 lg:px-24 lg:text-start ">
       <h2 className="text-4xl mb-10 font-Posterama cap">About Me</h2>
       <p className="text-gray-300 mb-12">
         Hello! I'm Mostafa, a self-taught web developer with a unique journey in
@@ -19,7 +19,7 @@ const AboutMe = () => {
           a self-taught journey. Over the course of two years, I acquired
           proficiency in a variety of technologies including:
         </p>
-        <div className="p-8 flex justify-center gap-8">
+        <div className="p-8 pr-0 flex justify-center gap-8">
           {frontendTechIcons.map(({ name, img }) => (
             <TechIcon name={name} img={img} key={name} />
           ))}
@@ -31,7 +31,7 @@ const AboutMe = () => {
           Motivated to broaden my skills, I dedicated time to exploring backend
           technologies. In the last couple of months, I delved into:
         </p>
-        <div className="p-8 flex justify-center items-center gap-8">
+        <div className="p-8 pr-0 flex justify-center items-center gap-8">
           {backendTechIcons.map(({ name, img }) => (
             <TechIcon name={name} img={img} key={name} />
           ))}
