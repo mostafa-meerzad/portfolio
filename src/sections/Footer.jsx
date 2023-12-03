@@ -2,6 +2,19 @@ import { motion } from "framer-motion";
 import { socialMediaLinks } from "../data";
 
 const Footer = () => {
+  const container = {
+    hidden:{opacity:0, scale:.5},
+    visible:{opacity:1, scale:1, transition:{
+      staggerChildren:0.2,
+    }},
+  }
+  const item = {
+    hidden:{opacity:0, scale:.5},
+    visible:{
+      opacity:1,
+      scale:1
+    }
+  }
   return (
     <section className="w-full flex flex-col items-center text-center gap-8 px-4 py-8 md:flex-row md:justify-between md:text-start md:px-12 lg:px-24">
       <div className="md:w-1/2">
@@ -11,15 +24,15 @@ const Footer = () => {
         </p>
       </div>
 
-      <ul className="flex gap-8">
+      <motion.ul variants={container} initial="hidden"  whileInView={"visible"} className="flex gap-8">
         {socialMediaLinks.map(({ name, img, url }) => (
-          <motion.li key={name} whileHover={{scale:1.2}}>
+          <motion.li variants={item} key={name} whileHover={{scale:1.2}}>
             <a href={url}>
               <img src={img} alt={name} className="w-8" />
             </a>
           </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </section>
   );
 };
