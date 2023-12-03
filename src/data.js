@@ -1,5 +1,5 @@
 import { makeMoney, adviceGenerator, ageCalculator, bookmark, multiStepForm, restCountries, room, todoApp } from "./assets/images";
-import { linkedin, github, frontendmentor } from "./assets/icons";
+import { linkedin, github, frontendmentor, html, css, js, react, node, express, mongodb } from "./assets/icons";
 
 const technologies = [
   "html",
@@ -96,4 +96,16 @@ const socialMediaLinks = [
   },
 ];
 
-export { technologies, projects, socialMediaLinks };
+const frontendTechIcons = [
+  {name:"html", img:html},
+  {name:"css", img:css},
+  {name:"javascript", img:js},
+  {name:"react", img:react},
+]
+
+const backendTechIcons = [
+  {name: "nodejs", img:node},
+  {name: "express", img:express},
+  {name: "mongodb", img:mongodb},
+]
+export { technologies, projects, socialMediaLinks, frontendTechIcons, backendTechIcons };
