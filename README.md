@@ -82,7 +82,7 @@ While I've made strides in backend development, I acknowledge the ongoing learni
 
 ## Contact
 
-**Email:** mostafameerzad.email@example.com
+**Email:** mostafameerzad@gmail.com
 
 **Github:** [mostafa-meerzad](https://github.com/mostafa-meerzad)
 
