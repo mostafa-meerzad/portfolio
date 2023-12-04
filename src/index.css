@@ -72,7 +72,16 @@
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   }
-
+  /* remove that middle box-shadow animation in FF browsers, that was causing the box-shadow blinking effect */
+  
+  @supports (-moz-appearance: none) {
+    .bg-shadow::before {
+      animation-name: shadow-moz;
+    }
+    .bg-shadow-desktop::before {
+      animation-name: shadow-desktop-moz;
+    }
+  }
   @keyframes shadow {
     0%,
     100% {
@@ -91,6 +100,20 @@
     50% {
       box-shadow: -200px -60px 150px 5px #ff009599,
         100px 280px 190px 6px #00a9ff99;
+    }
+  }
+
+  @keyframes shadow-moz {
+    0%,
+    100% {
+      box-shadow: -80px -20px 98px 11px #ff0095, 140px 140px 104px 14px #00a9ff;
+    }
+  }
+  @keyframes shadow-desktop-moz {
+    0%,
+    100% {
+      box-shadow: -200px -60px 170px 11px #ff009599,
+        100px 280px 160px 14px #00a9ff99;
     }
   }
 }

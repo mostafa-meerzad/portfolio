@@ -3,16 +3,15 @@ import { socialMediaLinks } from "../data";
 
 const Footer = () => {
   const container = {
-    hidden:{opacity:0, scale:.5},
-    visible:{opacity:1, scale:1, transition:{
+    hidden:{opacity:0,},
+    visible:{opacity:1, transition:{
       staggerChildren:0.2,
     }},
   }
   const item = {
-    hidden:{opacity:0, scale:.5},
+    hidden:{opacity:0,},
     visible:{
       opacity:1,
-      scale:1
     }
   }
   return (
