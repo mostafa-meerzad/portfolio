@@ -3,25 +3,6 @@ import TechIcon from "../components/TechIcon";
 import { motion } from "framer-motion";
 
 const AboutMe = () => {
-  
-  const container = {
-    hidden : {
-      opacity:0,
-      scale:.5
-    },
-    visible:{
-      opacity:1,
-      scale:1,
-      transition:{
-        delayChildren:0.3,
-        staggerChildren:0.2
-      }
-    }
-  }
-  const item = {
-  hidden:{opacity:0, scale:.5},
-  visible:{opacity:1, scale:1}
-  }
   return (
     <div className="px-4 text-center md:px-12 lg:px-24 lg:text-start ">
       <h2 className="text-4xl mb-10 font-Posterama cap">About Me</h2>
@@ -39,11 +20,7 @@ const AboutMe = () => {
           a self-taught journey. Over the course of two years, I acquired
           proficiency in a variety of technologies including:
         </p>
-        <motion.div variants={container} initial="hidden" whileInView="visible" className="p-8 pr-0 flex justify-center gap-8">
-          {frontendTechIcons.map(({ name, img }) => (
-            <TechIcon name={name} img={img} variants={item} key={name} />
-          ))}
-        </motion.div>
+        <RenderTechIcons techIcons={frontendTechIcons} />
       </div>
       <h3 className="text-3xl font-Posterama  my-4">backend</h3>
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
@@ -51,11 +28,7 @@ const AboutMe = () => {
           Motivated to broaden my skills, I dedicated time to exploring backend
           technologies. In the last couple of months, I delved into:
         </p>
-        <motion.div variants={container} initial="hidden" whileInView="visible" className="p-8 pr-0 flex justify-center items-center gap-8">
-          {backendTechIcons.map(({ name, img }) => (
-            <TechIcon name={name} img={img} variants={item} key={name} />
-          ))}
-        </motion.div>
+        <RenderTechIcons techIcons={backendTechIcons} />
       </div>
       <br />
       <p className="text-gray-300">
@@ -66,4 +39,33 @@ const AboutMe = () => {
   );
 };
 
+const containerVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: { opacity: 1, scale: 1 },
+};
+
+const RenderTechIcons = ({ techIcons }) => (
+  <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    whileInView="visible"
+    className="p-8 pr-0 flex justify-center items-center gap-8"
+  >
+    {techIcons.map(({ name, img }) => (
+      <TechIcon name={name} img={img} variants={itemVariants} key={name} />
+    ))}
+  </motion.div>
+);
 export default AboutMe;
