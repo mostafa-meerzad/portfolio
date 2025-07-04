@@ -1,14 +1,15 @@
 import {
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuTrigger
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
 import Image from "next/image";
 import Link from "next/link";
 import { about } from "../constants/constants";
 import ListItem from "./ListItem";
+import me from "../assets/me-colored.png";
 
 const AboutNav = () => {
   return (
@@ -22,7 +23,7 @@ const AboutNav = () => {
             <NavigationMenuLink asChild>
               <div className="from-muted/50 to-muted flex h-full w-full flex-col justify-center items-center rounded-md bg-linear-to-b p-4 no-underline outline-hidden select-none focus:shadow-md">
                 <Image
-                  src={"/me-colored.png"}
+                  src={me}
                   width={200}
                   height={200}
                   alt="Mostafa"

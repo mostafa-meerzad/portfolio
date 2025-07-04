@@ -14,6 +14,7 @@ import {
   DrawerTitle,
 } from "@/components/ui/drawer";
 import ModeToggle from "./ModeToggle";
+import me from "../assets/me.png";
 
 const MobileDrawer = () => {
   return (
@@ -22,7 +23,7 @@ const MobileDrawer = () => {
         <Menu className="h-6 w-6" />
       </DrawerTrigger>
 
-      <DrawerContent className="p-4 space-y-6 bg-background text-foreground " >
+      <DrawerContent className="p-4 space-y-6 bg-background text-foreground ">
         <VisuallyHidden>
           <DrawerTitle>Mobile navigation menu</DrawerTitle>
         </VisuallyHidden>
@@ -33,10 +34,10 @@ const MobileDrawer = () => {
         {/* Mini Profile */}
         <div className="flex items-center gap-4 mt-2">
           <Image
-            src="/me.png"
+            src={me}
             alt="Mostafa"
-            width={20}
-            height={20}
+            width={100}
+            height={100}
             className="rounded-full border shadow-sm object-cover w-14 h-14"
           />
           <div>
@@ -72,7 +73,7 @@ const MobileDrawer = () => {
 
         <div className="pt-8 flex items-center justify-center gap-3">
           <div className="text-xs text-muted-foreground mb-1">Appearance</div>
-          <ModeToggle/>
+          <ModeToggle />
         </div>
       </DrawerContent>
     </Drawer>
