@@ -7,9 +7,8 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { projects } from "../constants/constants";
 import AboutNav from "./AboutNav";
-import ListItem from "./ListItem";
+import ProjectsNav from "./ProjectsNav";
 
 const Navigation = () => {
   return (
@@ -24,20 +23,9 @@ const Navigation = () => {
           {/* </NavigationMenuContent> */}
         </NavigationMenuItem>
         {/* ------------------ About tab --------------------- */}
-        <AboutNav/>
+        <AboutNav />
         {/* ------------------ Projects tab ------------------- */}
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-          <NavigationMenuContent className="max-w-sm">
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {projects.map((component) => (
-                <ListItem key={component.title} title={component.title}>
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+        <ProjectsNav />
         {/* ------------------ Contact tab -------------------- */}
         <NavigationMenuItem>
           <NavigationMenuTrigger>Contact</NavigationMenuTrigger>
