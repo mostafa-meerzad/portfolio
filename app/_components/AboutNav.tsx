@@ -17,7 +17,7 @@ const AboutNav = () => {
         <Link href={"/about"}>About</Link>
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <ul className="grid gap-3 md:w-[280px] lg:w-[500px] lg:grid-cols-[.70fr_.9fr] lg:items-center">
+        <ul className="grid gap-3 md:w-[280px] lg:w-[500px] lg:grid-cols-[.70fr_.9fr] lg:items-center animate-fade-in">
           <li className="row-span-3">
             <NavigationMenuLink asChild>
               <div className="from-muted/50 to-muted flex h-full w-full flex-col justify-center items-center rounded-md bg-linear-to-b p-4 no-underline outline-hidden select-none focus:shadow-md">

@@ -14,7 +14,7 @@ const ContactsNav = () => {
         <Link href={"/contact"}>Contact</Link>
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <ul className="grid w-[250px] gap-1">
+        <ul className="grid w-[250px] gap-1 animate-fade-in">
           {contacts.map((prop) => {
             return <ContactLink {...prop} key={prop.label} />;
           })}
