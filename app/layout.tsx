@@ -20,16 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  suppressHydrationWarning>
-      <body className={`${urbanist.className}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${urbanist.className} bg-[url('/bg-white.png')] dark:bg-[url('/bg-black.png')] bg-cover bg-no-repeat`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <main>{children}</main>
+            <Navbar />
+            <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
