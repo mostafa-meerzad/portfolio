@@ -21,15 +21,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${urbanist.className} bg-[url('/bg-white.png')] dark:bg-[url('/bg-black.png')] bg-cover bg-no-repeat`}>
+      <body
+        className={`${urbanist.className} bg-[url('/bg-white.png')] dark:bg-[url('/bg-black.png')] bg-cover bg-no-repeat max-w-[1440px] mx-auto`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-            <Navbar />
-            <main>{children}</main>
+          <Navbar />
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
