@@ -1,6 +1,12 @@
 import { Mail } from "lucide-react";
+import { StaticImageData } from "next/image";
 import React from "react";
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { IconType } from "react-icons";
+import { FaGithub, FaLinkedin, FaMedal, FaWhatsapp } from "react-icons/fa";
+import { PiPlusBold } from "react-icons/pi";
+import backend from "../assets/backend.png";
+import frontend from "../assets/frontend.png";
+import fullStack from "../assets/full-stack.png";
 
 type ProjectsType = { title: string; href: string; description: string };
 const projects: ProjectsType[] = [
@@ -92,4 +98,31 @@ const contacts: ContactsType[] = [
   },
 ];
 
-export { about, projects, contacts };
+type ServicesType = { title: string; img: StaticImageData };
+const services: ServicesType[] = [
+  { title: "frontend development", img: frontend },
+  { title: "backend development", img: backend },
+  { title: "full stack development", img: fullStack },
+];
+
+type AdvantagesType = { value: string; label: string; Icon: IconType };
+
+const advantages: AdvantagesType[] = [
+  {
+    value: "3",
+    label: "years of practical experience",
+    Icon: PiPlusBold,
+  },
+  {
+    value: "150",
+    label: "projects built during learning",
+    Icon: PiPlusBold,
+  },
+  {
+    value: "Top 10",
+    label: "GitHub contributor in Afghanistan",
+    Icon: FaMedal,
+  },
+];
+
+export { about, advantages, contacts, projects, services };
