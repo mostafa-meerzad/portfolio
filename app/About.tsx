@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="   px-8 md:flex content-center items-center md:gap-16 lg:gap-20 lg:px-24">
-      <ul className="hidden md:flex flex-col gap-5">
+    <section className="grid grid-cols-1 md:grid-cols-5">
+      <ul className="hidden md:flex md:flex-col md:gap-8 md:justify-center col-start-1 col-end-4 row-start-1 ">
         {services.map(({ title, img }) => (
           <li
             key={title}
@@ -16,7 +16,8 @@ const About = () => {
           </li>
         ))}
       </ul>
-      <div className="flex flex-col items-center gap-5 justify-center max-w-lg mx-auto text-center md:text-start md:min-w-sm md:max-w-md lg:max-w-3xl">
+      {/* -------------------- about section --------------- */}
+      <div className="col-start-3 col-end-6 row-start-1  flex flex-col items-center gap-5 justify-center text-center md:text-start ">
         <h2 className="text-4xl font-semibold ">About me</h2>
         <p>
           I began my software engineering journey in 2019, navigating through
@@ -25,7 +26,7 @@ const About = () => {
           applications that solve real problems and feel great to use.
         </p>
 
-        <ul className="w-full flex justify-center gap-8 lg:gap-12 lg:justify-start">
+        <ul className="flex justify-center gap-8 lg:gap-12 ">
           {advantages.map(({ value, label, Icon }) => (
             <li
               key={value}

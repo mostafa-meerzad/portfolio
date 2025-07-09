@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${urbanist.className} bg-[url('/bg-white.png')] dark:bg-[url('/bg-black.png')] bg-cover bg-no-repeat max-w-[1440px] mx-auto`}
+        className={`${urbanist.className} bg-[url('/bg-white.png')] dark:bg-[url('/bg-black.png')] bg-cover bg-no-repeat max-w-[1440px] mx-auto `}
       >
         <ThemeProvider
           attribute="class"
@@ -31,7 +31,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main>{children}</main>
+          <main className="px-3 md:px-8 lg:px-12">{children}</main>
         </ThemeProvider>
       </body>
     </html>
