@@ -7,6 +7,9 @@ import { PiPlusBold } from "react-icons/pi";
 import backend from "../assets/backend.png";
 import frontend from "../assets/frontend.png";
 import fullStack from "../assets/full-stack.png";
+import backendDark from "../assets/backend-dark.png";
+import frontendDark from "../assets/frontend-dark.png";
+import fullStackDark from "../assets/full-stack-dark.png";
 
 type ProjectsType = { title: string; href: string; description: string };
 const projects: ProjectsType[] = [
@@ -98,11 +101,15 @@ const contacts: ContactsType[] = [
   },
 ];
 
-type ServicesType = { title: string; img: StaticImageData };
+type ServicesType = {
+  title: string;
+  img: StaticImageData;
+  darkImg: StaticImageData;
+};
 const services: ServicesType[] = [
-  { title: "frontend development", img: frontend },
-  { title: "backend development", img: backend },
-  { title: "full stack development", img: fullStack },
+  { title: "frontend development", img: frontend, darkImg: frontendDark },
+  { title: "backend development", img: backend, darkImg: backendDark },
+  { title: "full stack development", img: fullStack, darkImg: fullStackDark },
 ];
 
 type AdvantagesType = { value: string; label: string; Icon: IconType };

@@ -5,13 +5,23 @@ import Image from "next/image";
 const About = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-5">
-      <ul className="hidden md:flex md:flex-col md:gap-8 md:justify-center col-start-1 col-end-4 row-start-1 ">
-        {services.map(({ title, img }) => (
+      {/* ---------------- services section ------------------ */}
+      <ul className="hidden md:flex md:flex-col md:gap-4 md:justify-center col-start-1 col-end-4 row-start-1 ">
+        {services.map(({ title, img, darkImg }) => (
           <li
             key={title}
             className="flex justify-start items-center gap-5 capitalize"
           >
-            <Image width={50} height={50} src={img} alt={title} />
+            <Image
+              src={img}
+              alt={title}
+              className="dark:hidden block w-[53px] h-[53px]"
+            />
+            <Image
+              src={darkImg}
+              alt={title}
+              className="hidden dark:block w-[75px] h-[75px]"
+            />
             <h3>{title}</h3>
           </li>
         ))}
