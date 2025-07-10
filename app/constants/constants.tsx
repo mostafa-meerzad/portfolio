@@ -10,6 +10,9 @@ import fullStack from "../assets/full-stack.png";
 import backendDark from "../assets/backend-dark.png";
 import frontendDark from "../assets/frontend-dark.png";
 import fullStackDark from "../assets/full-stack-dark.png";
+import promptopia from "../assets/promptopia.png";
+import spaceTourism from "../assets/space-tourism.png";
+import nike from "../assets/nike.png";
 
 type ProjectsType = { title: string; href: string; description: string };
 const projects: ProjectsType[] = [
@@ -132,4 +135,43 @@ const advantages: AdvantagesType[] = [
   },
 ];
 
-export { about, advantages, contacts, projects, services };
+type TopProjectType = {
+  name: string;
+  description: string;
+  img: StaticImageData;
+  technologies: string[];
+  github: string;
+  preview: string;
+};
+const topProjects: TopProjectType[] = [
+  {
+    name: "Promptopia",
+    description:
+      "Promptopia is a full-stack AI prompt sharing application where users can create, manage, and explore high-quality AI prompts. Built with the latest web technologies, it offers a smooth and responsive experience for prompt creators and explorers alike.",
+    technologies: ["Next.js", "TypeScript", "Prisma", "Axios", "PostgreSQL"],
+    github: "https://github.com/mostafa-meerzad/promptopia.git",
+    preview: "https://promptopia-black-beta.vercel.app",
+    img: promptopia,
+  },
+  {
+    name: "Space Tourism",
+    description:
+      "Space tourism Promptopia is a full-stack AI prompt sharing application where users can create, manage, ",
+    technologies: ["Next.js", "Tailwindcss", "Framer Motion"],
+    github: "https://github.com/mostafa-meerzad/space-tourism-next.js.git",
+    preview:
+      "https://vercel.com/mostafas-projects-01d89a75/space-tourism/9VrLLa6huJagezJF5Njb5MdnVEhE",
+    img: spaceTourism,
+  },
+  {
+    name: "Nike",
+    description:
+      "Nike is a full-stack AI prompt sharing application where users can create, manage, ",
+    technologies: ["Next.js", "Tailwindcss", "Framer Motion"],
+    github: "https://github.com/mostafa-meerzad/nike.git",
+    preview: "https://serene-biscotti-6c2764.netlify.app/",
+    img: nike,
+  },
+];
+
+export { about, advantages, contacts, projects, services, topProjects };
