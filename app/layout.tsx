@@ -3,6 +3,7 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import Footer from "./Footer";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
         >
           <Navbar />
           <main className="px-3 md:px-8 lg:px-12">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

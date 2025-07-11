@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 import { StaticImageData } from "next/image";
 import React from "react";
 import { IconType } from "react-icons";
-import { FaGithub, FaLinkedin, FaMedal, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaInstagramSquare, FaLinkedin, FaMedal, FaWhatsapp } from "react-icons/fa";
 import { PiPlusBold } from "react-icons/pi";
 import backend from "../assets/backend.png";
 import frontend from "../assets/frontend.png";
@@ -13,6 +13,7 @@ import fullStackDark from "../assets/full-stack-dark.png";
 import promptopia from "../assets/promptopia.png";
 import spaceTourism from "../assets/space-tourism.png";
 import nike from "../assets/nike.png";
+import { BiLogoInstagramAlt } from "react-icons/bi";
 
 type ProjectsType = { title: string; href: string; description: string };
 const projects: ProjectsType[] = [
@@ -159,8 +160,7 @@ const topProjects: TopProjectType[] = [
       "Space tourism Promptopia is a full-stack AI prompt sharing application where users can create, manage, ",
     technologies: ["Next.js", "Tailwindcss", "Framer Motion"],
     github: "https://github.com/mostafa-meerzad/space-tourism-next.js.git",
-    preview:
-      "https://space-tourism-mocha-three.vercel.app/",
+    preview: "https://space-tourism-mocha-three.vercel.app/",
     img: spaceTourism,
   },
   {
@@ -174,4 +174,32 @@ const topProjects: TopProjectType[] = [
   },
 ];
 
-export { about, advantages, contacts, projects, services, topProjects };
+type SocialMediaType = { Img: IconType; href: string; hover: string };
+
+const socialMedia: SocialMediaType[] = [
+  {
+    Img: FaLinkedin,
+    href: "https://www.linkedin.com/in/mostafa-meerzad-a753371b7/",
+    hover: "Linkedin",
+  },
+  {
+    Img: FaGithub,
+    href: "https://github.com/mostafa-meerzad",
+    hover: "Github",
+  },
+  {
+    Img: BiLogoInstagramAlt ,
+    href: "https://www.instagram.com/mostafameerzad/",
+    hover: "Instagram",
+  },
+];
+
+export {
+  about,
+  advantages,
+  contacts,
+  projects,
+  services,
+  topProjects,
+  socialMedia,
+};
