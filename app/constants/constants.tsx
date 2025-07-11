@@ -160,7 +160,7 @@ const topProjects: TopProjectType[] = [
     technologies: ["Next.js", "Tailwindcss", "Framer Motion"],
     github: "https://github.com/mostafa-meerzad/space-tourism-next.js.git",
     preview:
-      "https://vercel.com/mostafas-projects-01d89a75/space-tourism/9VrLLa6huJagezJF5Njb5MdnVEhE",
+      "https://space-tourism-mocha-three.vercel.app/",
     img: spaceTourism,
   },
   {
