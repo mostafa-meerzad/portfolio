@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./Navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Footer from "./Footer";
+import LayoutWrapper from "./LayoutWrapper";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -22,19 +23,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${urbanist.className} bg-[url('/bg-white.png')] dark:bg-[url('/bg-black.png')] bg-cover bg-no-repeat max-w-[1440px] mx-auto `}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          <main className="px-3 md:px-8 lg:px-12">{children}</main>
-          <Footer />
-        </ThemeProvider>
+      <body className={`${urbanist.className}`}>
+        <LayoutWrapper>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            <main className="px-3 md:px-8 lg:px-12">{children}</main>
+            <Footer />
+          </ThemeProvider>
+        </LayoutWrapper>
       </body>
     </html>
   );
