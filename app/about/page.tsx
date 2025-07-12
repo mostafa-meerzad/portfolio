@@ -1,7 +1,12 @@
 import React from "react";
+import AboutMe from "./AboutMe";
 
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return (
+    <div>
+      <AboutMe />
+    </div>
+  );
 };
 
 export default AboutPage;
