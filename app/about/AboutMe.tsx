@@ -10,7 +10,7 @@ const AboutMe = () => {
         src={avatarPlaceHolder}
         className="col-start-1 col-end-3 md:col-end-2 h-[300px] md:h-[300px] lg:h-[400px] border object-cover"
       />
-      <p className=" text-lg lg:text-xl lg:leading-relaxed text-center max-sm:mx-auto md:text-start col-start-1 col-end-3 md:col-start-2  place-self-center px-5">
+      <p className=" text-lg lg:text-xl lg:leading-loose text-center max-sm:mx-auto md:text-start col-start-1 col-end-3 md:col-start-2  place-self-center px-3 border rounded-2xl py-3 md:p-5 bg-zinc-300/20 dark:bg-zinc-900/20 h-full  content-center ">
         <span className="block text-4xl mb-4">
           <span className="">Hey! I’m</span>
           <span className="font-bold block">Mostafa Meerzad</span>
