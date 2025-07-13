@@ -52,6 +52,11 @@ import { VscVscode } from "react-icons/vsc";
 import { IoLogoJavascript } from "react-icons/io";
 import { BsFiletypeSql } from "react-icons/bs";
 import { MdOutlineHttp } from "react-icons/md";
+import frontendDevelopment from "../assets/frontend-development.png";
+import backendDevelopment from "../assets/backend-development.png";
+import responsiveDesign from "../assets/responsive-web-design.png";
+import javascript from "../assets/javascript.png";
+import codingSamurai from "../assets/coding-samurai.png";
 
 type ProjectsType = { title: string; href: string; description: string };
 const projects: ProjectsType[] = [
@@ -293,11 +298,39 @@ const skillsAndTools: SkillAndTool[] = [
   {
     title: "Currently Exploring",
     skillSet: [
-      { name: "Data Structures & Algorithms", Img: SiThealgorithms  },
+      { name: "Data Structures & Algorithms", Img: SiThealgorithms },
       { name: "System Design ", Img: SiAffinitydesigner },
-      { name: "OOP", Img: FaRegObjectGroup  },
+      { name: "OOP", Img: FaRegObjectGroup },
       { name: "DB Design", Img: FaDatabase },
     ],
+  },
+];
+
+type Certificate = {
+  title: string;
+  img: StaticImageData;
+};
+
+const certificates: Certificate[] = [
+  {
+    title: "frontend development",
+    img: frontendDevelopment,
+  },
+  {
+    title: "backend development",
+    img: backendDevelopment,
+  },
+  {
+    title: "responsive web design",
+    img: responsiveDesign,
+  },
+  {
+    title: "javascript programming",
+    img: javascript,
+  },
+  {
+    title: "web development internship",
+    img: codingSamurai,
   },
 ];
 
@@ -310,4 +343,5 @@ export {
   socialMedia,
   topProjects,
   skillsAndTools,
+  certificates,
 };
