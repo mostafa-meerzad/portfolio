@@ -2,18 +2,56 @@ import { Mail } from "lucide-react";
 import { StaticImageData } from "next/image";
 import React from "react";
 import { IconType } from "react-icons";
-import { FaGithub, FaInstagram, FaInstagramSquare, FaLinkedin, FaMedal, FaWhatsapp } from "react-icons/fa";
+import { BiLogoInstagramAlt, BiLogoPostgresql } from "react-icons/bi";
+import {
+  FaDatabase,
+  FaDocker,
+  FaGithub,
+  FaLinkedin,
+  FaLinux,
+  FaMedal,
+  FaPython,
+  FaReact,
+  FaRegObjectGroup,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { PiPlusBold } from "react-icons/pi";
-import backend from "../assets/backend.png";
-import frontend from "../assets/frontend.png";
-import fullStack from "../assets/full-stack.png";
 import backendDark from "../assets/backend-dark.png";
+import backend from "../assets/backend.png";
 import frontendDark from "../assets/frontend-dark.png";
+import frontend from "../assets/frontend.png";
 import fullStackDark from "../assets/full-stack-dark.png";
+import fullStack from "../assets/full-stack.png";
+import nike from "../assets/nike.png";
 import promptopia from "../assets/promptopia.png";
 import spaceTourism from "../assets/space-tourism.png";
-import nike from "../assets/nike.png";
-import { BiLogoInstagramAlt } from "react-icons/bi";
+import {
+  RiJavaLine,
+  RiNextjsLine,
+  RiTailwindCssFill,
+  RiVercelLine,
+} from "react-icons/ri";
+import {
+  SiAffinitydesigner,
+  SiChakraui,
+  SiExpress,
+  SiFramer,
+  SiJest,
+  SiMongodb,
+  SiPostman,
+  SiPrisma,
+  SiRadixui,
+  SiShadcnui,
+  SiThealgorithms,
+  SiTypescript,
+  SiWebstorm,
+} from "react-icons/si";
+import { TbBrandNodejs } from "react-icons/tb";
+import { GrMysql } from "react-icons/gr";
+import { VscVscode } from "react-icons/vsc";
+import { IoLogoJavascript } from "react-icons/io";
+import { BsFiletypeSql } from "react-icons/bs";
+import { MdOutlineHttp } from "react-icons/md";
 
 type ProjectsType = { title: string; href: string; description: string };
 const projects: ProjectsType[] = [
@@ -188,9 +226,78 @@ const socialMedia: SocialMediaType[] = [
     hover: "Github",
   },
   {
-    Img: BiLogoInstagramAlt ,
+    Img: BiLogoInstagramAlt,
     href: "https://www.instagram.com/mostafameerzad/",
     hover: "Instagram",
+  },
+];
+
+type SkillSet = {
+  name: string;
+  Img: IconType;
+};
+
+export type SkillAndTool = {
+  title: string;
+  skillSet: SkillSet[];
+};
+
+const skillsAndTools: SkillAndTool[] = [
+  {
+    title: "frontend",
+    skillSet: [
+      { name: "React.js", Img: FaReact },
+      { name: "Next.js", Img: RiNextjsLine },
+      { name: "Chakra UI", Img: SiChakraui },
+      { name: "Radix UI", Img: SiRadixui },
+      { name: "Shadcn", Img: SiShadcnui },
+      { name: "Tailwind CSS", Img: RiTailwindCssFill },
+      { name: "Framer Motion", Img: SiFramer },
+    ],
+  },
+  {
+    title: "backend",
+    skillSet: [
+      { name: "Node.js", Img: TbBrandNodejs },
+      { name: "Express.js", Img: SiExpress },
+      { name: "Rest API", Img: MdOutlineHttp },
+      { name: "Prisma", Img: SiPrisma },
+      { name: "MongoDB", Img: SiMongodb },
+      { name: "PostgreSQL", Img: BiLogoPostgresql },
+      { name: "MySQL", Img: GrMysql },
+    ],
+  },
+  {
+    title: "tools",
+    skillSet: [
+      { name: "Git & Github", Img: FaGithub },
+      { name: "Vercel", Img: RiVercelLine },
+      { name: "VsCode", Img: VscVscode },
+      { name: "Postman", Img: SiPostman },
+      { name: "Linux CLI", Img: FaLinux },
+      { name: "Web Storm", Img: SiWebstorm },
+      { name: "Docker", Img: FaDocker },
+      { name: "Jest", Img: SiJest },
+    ],
+  },
+  {
+    title: "languages",
+    skillSet: [
+      { name: "Javascript", Img: IoLogoJavascript },
+      { name: "Typescript", Img: SiTypescript },
+      { name: "Python", Img: FaPython },
+      { name: "Java", Img: RiJavaLine },
+      { name: "SQL", Img: BsFiletypeSql },
+    ],
+  },
+  {
+    title: "Currently Exploring",
+    skillSet: [
+      { name: "Data Structures & Algorithms", Img: SiThealgorithms  },
+      { name: "System Design ", Img: SiAffinitydesigner },
+      { name: "OOP", Img: FaRegObjectGroup  },
+      { name: "DB Design", Img: FaDatabase },
+    ],
   },
 ];
 
@@ -200,6 +307,7 @@ export {
   contacts,
   projects,
   services,
-  topProjects,
   socialMedia,
+  topProjects,
+  skillsAndTools,
 };
