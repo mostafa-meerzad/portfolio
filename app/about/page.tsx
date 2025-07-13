@@ -1,5 +1,6 @@
 import AboutMe from "./AboutMe";
 import Certificates from "./Certificates";
+import FunFacts from "./FunFacts";
 import Journey from "./Journey";
 import SkillsAndTools from "./SkillsAndTools";
 
@@ -10,6 +11,7 @@ const AboutPage = () => {
       <Journey />
       <SkillsAndTools />
       <Certificates />
+      <FunFacts/>
     </div>
   );
 };
