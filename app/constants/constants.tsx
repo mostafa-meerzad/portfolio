@@ -27,6 +27,9 @@ import fullStack from "../assets/full-stack.png";
 import nike from "../assets/nike.png";
 import promptopia from "../assets/promptopia.png";
 import spaceTourism from "../assets/space-tourism.png";
+import gameHub from "../assets/game-hub.png";
+import issueTracker from "../assets/issue-tracker.png";
+import urlShortener from "../assets/url-shortener.jpg";
 import {
   RiJavaLine,
   RiNextjsLine,
@@ -61,45 +64,6 @@ import javascript from "../assets/javascript.png";
 import codingSamurai from "../assets/coding-samurai.png";
 import { GiTinker } from "react-icons/gi";
 import { HiMiniPaintBrush } from "react-icons/hi2";
-
-type ProjectsType = { title: string; href: string; description: string };
-const projects: ProjectsType[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
 
 type AboutType = { title: string; description: string };
 const about: AboutType[] = [
@@ -183,7 +147,7 @@ const advantages: AdvantagesType[] = [
   },
 ];
 
-type TopProjectType = {
+type ProjectType = {
   name: string;
   description: string;
   img: StaticImageData;
@@ -191,7 +155,7 @@ type TopProjectType = {
   github: string;
   preview: string;
 };
-const topProjects: TopProjectType[] = [
+const projects: ProjectType[] = [
   {
     name: "Promptopia",
     description:
@@ -200,6 +164,15 @@ const topProjects: TopProjectType[] = [
     github: "https://github.com/mostafa-meerzad/promptopia.git",
     preview: "https://promptopia-black-beta.vercel.app",
     img: promptopia,
+  },
+  {
+    name: "Game Hub",
+    description:
+      "A responsive and interactive video game discovery platform built with React 18 and TypeScript. Users can explore, search, and filter games by genre and platform — all powered by modern UI and state management libraries.",
+    technologies: ["Next.js", "TypeScript", "Prisma", "Axios", "PostgreSQL"],
+    github: "https://github.com/mostafa-meerzad/game-hub.git",
+    preview: "https://game-hub-psi-khaki.vercel.app/",
+    img: gameHub,
   },
   {
     name: "Space Tourism",
@@ -211,6 +184,16 @@ const topProjects: TopProjectType[] = [
     img: spaceTourism,
   },
   {
+    name: "Issue Tracker",
+    description:
+      "A responsive and interactive video game discovery platform built with React 18 and TypeScript. Users can explore, search, and filter games by genre and platform — all powered by modern UI and state management libraries.",
+    technologies: ["Next.js", "TypeScript", "Prisma", "Axios", "PostgreSQL"],
+
+    github: "https://github.com/mostafa-meerzad/issue-tracker.git",
+    preview: "https://issue-tracker-two-smoky.vercel.app/",
+    img: issueTracker,
+  },
+  {
     name: "Nike",
     description:
       "Nike is a full-stack AI prompt sharing application where users can create, manage, ",
@@ -218,6 +201,15 @@ const topProjects: TopProjectType[] = [
     github: "https://github.com/mostafa-meerzad/nike.git",
     preview: "https://serene-biscotti-6c2764.netlify.app/",
     img: nike,
+  },
+  {
+    name: "URL Shortener",
+    description:
+      "A feature-rich URL shortener application built with the MERN stack and TypeScript. Users can shorten long URLs, manage them through CRUD operations, and even add custom aliases. Authenticated users enjoy advanced features, while guests can still shorten links effortlessly.",
+    technologies: ["Node.js", "Typescript", "React.js", "MongoDB", "Axios"],
+    github: "https://github.com/mostafa-meerzad/url-shortener.git",
+    preview: "https://serene-biscotti-6c2764.netlify.app/",
+    img: urlShortener,
   },
 ];
 
@@ -370,7 +362,6 @@ export {
   projects,
   services,
   socialMedia,
-  topProjects,
   skillsAndTools,
   certificates,
   funFacts,
