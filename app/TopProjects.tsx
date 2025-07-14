@@ -1,5 +1,5 @@
 import React from "react";
-import { topProjects } from "./constants/constants";
+import { projects } from "./constants/constants";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,7 +18,7 @@ const TopProjects = () => {
     <section className="flex flex-col items-center gap-10 py-20">
       <h2 className="text-4xl font-semibold mb-5">Projects</h2>
       <ul className="flex flex-col gap-5">
-        {topProjects.map(
+        {projects.slice(0, 3).map(
           ({ name, description, github, img, preview, technologies }, i) => {
             const isEven = i % 2 === 0;
 

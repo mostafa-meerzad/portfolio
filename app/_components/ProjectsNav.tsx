@@ -10,12 +10,14 @@ import Link from "next/link";
 const ProjectsNav = () => {
   return (
     <NavigationMenuItem>
-      <NavigationMenuTrigger><Link href={"/projects"}>Projects</Link></NavigationMenuTrigger>
+      <NavigationMenuTrigger>
+        <Link href={"/projects"}>Projects</Link>
+      </NavigationMenuTrigger>
       <NavigationMenuContent>
         <ul className="grid w-[350px] gap-4 p-3 md:grid-cols-1 lg:w-[500px] lg:grid-cols-2 animate-fade-in">
-          {projects.map((component) => (
-            <ListItem key={component.title} title={component.title}>
-              {component.description}
+          {projects.slice(0, 4).map(({ name, description }) => (
+            <ListItem key={name} title={name}>
+              {description}
             </ListItem>
           ))}
         </ul>
