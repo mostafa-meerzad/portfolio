@@ -2,7 +2,12 @@ import { Mail } from "lucide-react";
 import { StaticImageData } from "next/image";
 import React from "react";
 import { IconType } from "react-icons";
-import { BiLogoInstagramAlt, BiLogoPostgresql } from "react-icons/bi";
+import {
+  BiLogoGmail,
+  BiLogoInstagramAlt,
+  BiLogoPostgresql,
+} from "react-icons/bi";
+import { BsFiletypeSql } from "react-icons/bs";
 import {
   FaDatabase,
   FaDocker,
@@ -18,24 +23,18 @@ import {
   FaRegObjectGroup,
   FaWhatsapp,
 } from "react-icons/fa";
+import { GiTinker } from "react-icons/gi";
+import { GrMysql } from "react-icons/gr";
+import { HiMiniPaintBrush } from "react-icons/hi2";
+import { IoLogoJavascript } from "react-icons/io";
+import { MdOutlineHttp } from "react-icons/md";
 import { PiPlusBold } from "react-icons/pi";
-import backendDark from "../assets/backend-dark.png";
-import backend from "../assets/backend.png";
-import frontendDark from "../assets/frontend-dark.png";
-import frontend from "../assets/frontend.png";
-import fullStackDark from "../assets/full-stack-dark.png";
-import fullStack from "../assets/full-stack.png";
-import nike from "../assets/nike.png";
-import promptopia from "../assets/promptopia.png";
-import spaceTourism from "../assets/space-tourism.png";
-import gameHub from "../assets/game-hub.png";
-import issueTracker from "../assets/issue-tracker.png";
-import urlShortener from "../assets/url-shortener.jpg";
 import {
   RiJavaLine,
   RiNextjsLine,
   RiTailwindCssFill,
   RiVercelLine,
+  RiWhatsappFill,
 } from "react-icons/ri";
 import {
   SiAffinitydesigner,
@@ -53,18 +52,24 @@ import {
   SiWebstorm,
 } from "react-icons/si";
 import { TbBrandNodejs } from "react-icons/tb";
-import { GrMysql } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
-import { IoLogoJavascript } from "react-icons/io";
-import { BsFiletypeSql } from "react-icons/bs";
-import { MdOutlineHttp } from "react-icons/md";
-import frontendDevelopment from "../assets/frontend-development.png";
+import backendDark from "../assets/backend-dark.png";
 import backendDevelopment from "../assets/backend-development.png";
-import responsiveDesign from "../assets/responsive-web-design.png";
-import javascript from "../assets/javascript.png";
+import backend from "../assets/backend.png";
 import codingSamurai from "../assets/coding-samurai.png";
-import { GiTinker } from "react-icons/gi";
-import { HiMiniPaintBrush } from "react-icons/hi2";
+import frontendDark from "../assets/frontend-dark.png";
+import frontendDevelopment from "../assets/frontend-development.png";
+import frontend from "../assets/frontend.png";
+import fullStackDark from "../assets/full-stack-dark.png";
+import fullStack from "../assets/full-stack.png";
+import gameHub from "../assets/game-hub.png";
+import issueTracker from "../assets/issue-tracker.png";
+import javascript from "../assets/javascript.png";
+import nike from "../assets/nike.png";
+import promptopia from "../assets/promptopia.png";
+import responsiveDesign from "../assets/responsive-web-design.png";
+import spaceTourism from "../assets/space-tourism.png";
+import urlShortener from "../assets/url-shortener.jpg";
 
 type AboutType = { title: string; description: string };
 const about: AboutType[] = [
@@ -214,28 +219,77 @@ const projects: ProjectType[] = [
   },
 ];
 
-type SocialMediaType = { Img: IconType; href: string; hover: string };
+type SocialMediaType = {
+  Img: IconType;
+  href: string;
+  hover: string;
+  opts: { target: string; rel: string; ariaLabel: string };
+  big?: boolean;
+};
 
 const socialMedia: SocialMediaType[] = [
   {
     Img: FaLinkedin,
     href: "https://www.linkedin.com/in/mostafa-meerzad-a753371b7/",
     hover: "Linkedin",
+    opts: {
+      target: "_blank",
+      rel: "noopener noreferrer",
+      ariaLabel: "linkedIn",
+    },
   },
   {
     Img: FaGithub,
     href: "https://github.com/mostafa-meerzad",
     hover: "Github",
+    opts: {
+      target: "_blank",
+      rel: "noopener noreferrer",
+      ariaLabel: "github",
+    },
   },
   {
     Img: BiLogoInstagramAlt,
     href: "https://www.instagram.com/mostafameerzad/",
     hover: "Instagram",
+    opts: {
+      target: "_blank",
+      rel: "noopener noreferrer",
+      ariaLabel: "instagram",
+    },
   },
   {
-    Img: FaFacebook ,
+    Img: FaFacebook,
     href: "https://www.facebook.com/mostafa.meerzad.5",
     hover: "Facebook",
+    opts: {
+      target: "_blank",
+      rel: "noopener noreferrer",
+      ariaLabel: "facebook",
+
+    },
+  },
+  {
+    Img: RiWhatsappFill,
+    href: "https://wa.me/93790306378?text=Hi%20Mostafa%2C%20I%20came%20across%20your%20portfolio%20and%20wanted%20to%20connect%21",
+    hover: "Say Hi on Whatsapp",
+    opts: {
+      target: "_blank",
+      rel: "noopener noreferrer",
+      ariaLabel: "Chat with me on Whatsapp",
+    },
+    big: true
+  },
+  {
+    Img: BiLogoGmail,
+    href: "mailto:mostafameerzad@gmail.com?subject=👋%20Let's%20Talk%20About%20a%20Project",
+    hover: "Send me an Email",
+    opts: {
+      target: "_self",
+      rel: "",
+      ariaLabel: "Send me an email",
+    },
+    big: true
   },
 ];
 
@@ -364,11 +418,11 @@ const funFacts: FunFact[] = [
 export {
   about,
   advantages,
+  certificates,
   contacts,
+  funFacts,
   projects,
   services,
-  socialMedia,
   skillsAndTools,
-  certificates,
-  funFacts,
+  socialMedia,
 };
