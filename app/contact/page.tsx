@@ -34,24 +34,30 @@ const ContactPage = () => {
         {" "}
         Connect with me on social media:
       </h2>{" "}
-      <ul className="flex justify-around flex-wrap gap-5 lg:gap-12 lg:max-w-3xl mx-auto">
-        {socialMedia.map(({ Img, hover, href }) => {
-          return (
-            <li
-              key={href}
-              className="border rounded-xl bg-zinc-300/20 dark:bg-zinc-900/20 p-5"
-            >
-              <Link
-                target="_blank"
-                href={href}
-                className="flex  items-center justify-center gap-1"
+      <ul className="flex flex-wrap justify-around  md:justify-center  gap-5 lg:gap-8 lg:max-w-3xl mx-auto px-5 md:px-0">
+        {socialMedia.map(
+          ({ Img, hover, href, opts: { ariaLabel, rel, target }, big }) => {
+            return (
+              <li
+                key={href}
+                className={`border rounded-xl bg-zinc-300/20 dark:bg-zinc-900/20 py-5 px-5 sm:px-8 md:px-5 w-40 ${
+                  big && "w-full md:w-[45%]"
+                }`}
               >
-                <Img className="size-9" />
-                <p>{hover}</p>
-              </Link>
-            </li>
-          );
-        })}
+                <Link
+                  target={target}
+                  rel={rel}
+                  aria-label={ariaLabel}
+                  href={href}
+                  className="flex  items-center justify-center gap-2"
+                >
+                  <Img className="size-9" />
+                  <p>{hover}</p>
+                </Link>
+              </li>
+            );
+          }
+        )}
       </ul>
     </section>
   );
