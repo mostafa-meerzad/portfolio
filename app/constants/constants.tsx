@@ -6,6 +6,7 @@ import { BiLogoInstagramAlt, BiLogoPostgresql } from "react-icons/bi";
 import {
   FaDatabase,
   FaDocker,
+  FaFacebook,
   FaGamepad,
   FaGithub,
   FaLinkedin,
@@ -230,6 +231,11 @@ const socialMedia: SocialMediaType[] = [
     Img: BiLogoInstagramAlt,
     href: "https://www.instagram.com/mostafameerzad/",
     hover: "Instagram",
+  },
+  {
+    Img: FaFacebook ,
+    href: "https://www.facebook.com/mostafa.meerzad.5",
+    hover: "Facebook",
   },
 ];
 
