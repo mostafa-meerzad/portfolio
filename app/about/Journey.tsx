@@ -6,7 +6,7 @@ const Journey = () => {
   return (
     <div
       className="grid grid-cols-1 md:grid-cols-[1fr_0.8fr] md:grid-rows-[0.1fr_.5fr] gap-5 justify-items-center md:justify-items-start md:items-center
-      border bg-zinc-300/20 dark:bg-zinc-900/20 rounded-2xl py-3 md:p-5 px-3
+      border background rounded-2xl py-3 md:p-5 px-3
     "
     >
       <h2 className="col-start-1 col-end-2 md:col-end-3 md:row-start-1 md:row-end-2 text-4xl font-semibold">

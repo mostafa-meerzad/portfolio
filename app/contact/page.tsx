@@ -9,7 +9,7 @@ const ContactPage = () => {
       <h2 className="text-4xl font-bold">
         Let’s Build Something Great Together
       </h2>
-      <Card className=" bg-zinc-300/20 dark:bg-zinc-900/20 grid lg:grid-cols-[0.9fr_1fr] xl:grid-cols-[0.6fr_1fr] gap-4 items-center lg:gap-2 xl:gap-8">
+      <Card className=" background grid lg:grid-cols-[0.9fr_1fr] xl:grid-cols-[0.6fr_1fr] gap-4 items-center lg:gap-2 xl:gap-8">
         <CardHeader>
           <p className="lg:col-start-1 lg:col-end-2  text-lg lg:text-start lg:text-2xl lg:mt-4 leading-relaxed ">
             <span className="block text-3xl lg:text-4xl font-semibold lg:mb-4 mb-2">
@@ -40,7 +40,7 @@ const ContactPage = () => {
             return (
               <li
                 key={href}
-                className={`border rounded-xl bg-zinc-300/20 dark:bg-zinc-900/20 py-5 px-5 sm:px-8 md:px-5 w-40 ${
+                className={`border rounded-xl background py-5 px-5 sm:px-8 md:px-5 w-40 ${
                   big && "w-full md:w-[45%]"
                 }`}
               >

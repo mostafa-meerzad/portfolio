@@ -11,7 +11,7 @@ const AboutPage = () => {
       <Journey />
       <SkillsAndTools />
       <Certificates />
-      <FunFacts/>
+      <FunFacts />
     </div>
   );
 };

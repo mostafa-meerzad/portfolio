@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between items-center border-t bg-black/30 p-5 px-3 md:px-8 lg:px-12">
+    <footer className="flex justify-between items-center border-t background p-5 px-3 md:px-8 lg:px-12">
       <h2 className="font-semibold">Mostafa Meerzad</h2>
       <ul className="flex justify-center gap-5">
         {socialMedia.map(({ Img, hover, href }) => (

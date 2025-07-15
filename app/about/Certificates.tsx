@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Certificates = () => {
   return (
-    <div className=" border rounded-xl dark:bg-zinc-900/20 bg-zinc-300/20 p-5 flex flex-col lg:flex-row lg:justify-between items-center ">
+    <div className=" border rounded-xl background p-5 flex flex-col lg:flex-row lg:justify-between items-center ">
       <div className="flex flex-col items-center lg:items-start gap-5 lg:w-[40%]">
         <h2 className="text-4xl font-semibold">Certifications</h2>
         <p className="leading-loose text-lg text-center lg:text-start">

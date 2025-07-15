@@ -3,7 +3,7 @@ import { funFacts } from "../constants/constants";
 
 const FunFacts = () => {
   return (
-    <div className="flex flex-col  border rounded-xl px-5 py-8 bg-zinc-300/20 dark:bg-zinc-900/20">
+    <div className="flex flex-col  border rounded-xl px-5 py-8 background">
       <h2 className="text-4xl font-bold mb-10 text-center">
         Fun Facts About Me
       </h2>
