@@ -8,7 +8,7 @@ const Certificates = () => {
     <div className=" border rounded-xl background p-5 flex flex-col lg:flex-row lg:justify-between items-center ">
       <div className="flex flex-col items-center lg:items-start gap-5 lg:w-[40%]">
         <h2 className="text-4xl font-semibold">Certifications</h2>
-        <p className="leading-loose text-lg text-center lg:text-start">
+        <p className="text text-center lg:text-start">
           Here are some of the certifications I’ve earned along my self-taught
           journey — from FreeCodeCamp, Coding Samurai, and others. Each one
           marks a major milestone in my growth as a developer.

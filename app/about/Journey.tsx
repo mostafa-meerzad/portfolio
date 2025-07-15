@@ -13,7 +13,7 @@ const Journey = () => {
         My Journey
       </h2>
 
-      <p className="col-start-1 col-end-2 md:row-start-2 md:row-end-3 text-center md:text-start text-lg px-5 md:px-0 md:self-start leading-loose md:leading-relaxed lg:leading-loose">
+      <p className="col-start-1 col-end-2 md:row-start-2 md:row-end-3 text-center md:text-start text px-5 md:px-0 md:self-start">
         My journey began in 2019 when I got accepted to Kabul University for
         software engineering. Then came challenges: COVID-19, a university
         attack, and the collapse of the government in 2021. I left college, but
