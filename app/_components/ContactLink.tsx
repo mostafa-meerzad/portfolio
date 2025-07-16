@@ -6,7 +6,7 @@ import { ContactsType } from "../constants/constants";
 const ContactLink = ({icon, label, value, href}: ContactsType) => {
   return (
     <NavigationMenuLink asChild>
-      <Link href={href}>
+      <Link href={href} target="_blank" rel="noopener noreferrer" >
         <div className="flex  gap-2 justify-start items-center font-medium">{icon} {label}</div>
         <div className="text-muted-foreground">
           {value}

@@ -99,13 +99,13 @@ const contacts: ContactsType[] = [
     icon: <Mail className="w-4 h-4" />,
     label: "Email",
     value: "mostafameerzad@gmail.com",
-    href: "",
+    href: "mailto:mostafameerzad@gmail.com?subject=👋%20Let's%20Talk%20About%20a%20Project",
   },
   {
     icon: <FaWhatsapp />,
     label: "Phone",
     value: "+93 790 306378",
-    href: "",
+    href: "https://wa.me/93790306378",
   },
   {
     icon: <FaGithub />,
