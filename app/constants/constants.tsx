@@ -4,14 +4,13 @@ import React from "react";
 import { IconType } from "react-icons";
 import {
   BiLogoGmail,
-  BiLogoInstagramAlt,
-  BiLogoPostgresql,
+  BiLogoPostgresql
 } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
 import {
   FaDatabase,
   FaDocker,
-  FaFacebook,
+  FaFacebookF,
   FaGamepad,
   FaGithub,
   FaLinkedin,
@@ -21,10 +20,10 @@ import {
   FaPython,
   FaReact,
   FaRegObjectGroup,
-  FaWhatsapp,
+  FaWhatsapp
 } from "react-icons/fa";
 import { GiTinker } from "react-icons/gi";
-import { GrMysql } from "react-icons/gr";
+import { GrInstagram, GrMysql } from "react-icons/gr";
 import { HiMiniPaintBrush } from "react-icons/hi2";
 import { IoLogoJavascript } from "react-icons/io";
 import { MdOutlineHttp } from "react-icons/md";
@@ -49,7 +48,7 @@ import {
   SiShadcnui,
   SiThealgorithms,
   SiTypescript,
-  SiWebstorm,
+  SiWebstorm
 } from "react-icons/si";
 import { TbBrandNodejs } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
@@ -249,7 +248,7 @@ const socialMedia: SocialMediaType[] = [
     },
   },
   {
-    Img: BiLogoInstagramAlt,
+    Img: GrInstagram  ,
     href: "https://www.instagram.com/mostafameerzad/",
     hover: "Instagram",
     opts: {
@@ -259,7 +258,7 @@ const socialMedia: SocialMediaType[] = [
     },
   },
   {
-    Img: FaFacebook,
+    Img: FaFacebookF ,
     href: "https://www.facebook.com/mostafa.meerzad.5",
     hover: "Facebook",
     opts: {
@@ -424,5 +423,6 @@ export {
   projects,
   services,
   skillsAndTools,
-  socialMedia,
+  socialMedia
 };
+
