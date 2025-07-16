@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AboutMe = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[0.7fr_1fr] items-center gap-8 mt-10">
+    <div className="grid grid-cols-1 md:grid-cols-[0.7fr_1fr] items-center gap-8">
       <Image
         alt="mostafa"
         src={avatarPlaceHolder}

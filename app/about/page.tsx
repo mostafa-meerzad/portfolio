@@ -6,7 +6,7 @@ import SkillsAndTools from "./SkillsAndTools";
 
 const AboutPage = () => {
   return (
-    <div className="grid gap-16">
+    <div className="grid gap-16 py-10">
       <AboutMe />
       <Journey />
       <SkillsAndTools />

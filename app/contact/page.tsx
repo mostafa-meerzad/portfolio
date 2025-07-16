@@ -6,9 +6,7 @@ import Link from "next/link";
 const ContactPage = () => {
   return (
     <section className="text-center my-10 flex flex-col gap-12">
-      <h2 className="text-4xl font-bold">
-        Let’s Build Something Great Together
-      </h2>
+      <h2 className="h2 sm:px-8">Let’s Build Something Great Together</h2>
       <Card className=" background grid lg:grid-cols-[0.9fr_1fr] xl:grid-cols-[0.6fr_1fr] gap-4 items-center lg:gap-2 xl:gap-8">
         <CardHeader>
           <p className="lg:col-start-1 lg:col-end-2  text-lg lg:text-start lg:text-2xl lg:mt-4 leading-relaxed ">
@@ -30,10 +28,7 @@ const ContactPage = () => {
           <ContactForm />
         </CardContent>
       </Card>
-      <h2 className="text-4xl font-semibold">
-        {" "}
-        Connect with me on social media:
-      </h2>{" "}
+      <h2 className="h2"> Connect with me on social media:</h2>{" "}
       <ul className="flex flex-wrap justify-around  md:justify-center  gap-5 lg:gap-8 lg:max-w-3xl mx-auto px-5 md:px-0">
         {socialMedia.map(
           ({ Img, hover, href, opts: { ariaLabel, rel, target }, big }) => {

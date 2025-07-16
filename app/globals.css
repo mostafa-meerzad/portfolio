@@ -140,7 +140,10 @@
   .background {
     @apply bg-zinc-300/40 dark:bg-zinc-900/40;
   }
-  .text{
-    @apply text-lg lg:text-xl lg:leading-loose
+  .text {
+    @apply text-lg lg:text-xl lg:leading-loose;
+  }
+  .h2 {
+    @apply text-4xl font-semibold;
   }
 }

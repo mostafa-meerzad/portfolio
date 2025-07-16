@@ -9,7 +9,7 @@ const Journey = () => {
       border background rounded-2xl py-3 md:p-5 px-3
     "
     >
-      <h2 className="col-start-1 col-end-2 md:col-end-3 md:row-start-1 md:row-end-2 text-4xl font-semibold">
+      <h2 className="col-start-1 col-end-2 md:col-end-3 md:row-start-1 md:row-end-2 h2">
         My Journey
       </h2>
 

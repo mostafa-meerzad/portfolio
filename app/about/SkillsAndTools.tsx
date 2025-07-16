@@ -4,7 +4,7 @@ import { SkillAndTool, skillsAndTools } from "../constants/constants";
 const SkillsAndTools = () => {
   return (
     <div className="flex flex-col items-center gap-8 ">
-      <h2 className="text-4xl font-semibold">Skills & Tools</h2>
+      <h2 className="h2">Skills & Tools</h2>
       <ul className="flex justify-around items-start  flex-col md:flex-row gap-5 p-5 border rounded-xl w-full background ">
         {skillsAndTools.map((item) => (
           <SkillSet {...item} key={item.title} />

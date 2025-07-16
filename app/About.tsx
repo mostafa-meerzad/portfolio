@@ -28,8 +28,8 @@ const About = () => {
       </ul>
       {/* -------------------- about section --------------- */}
       <div className="col-start-3 col-end-6 row-start-1  flex flex-col items-center gap-5 justify-center text-center md:text-start ">
-        <h2 className="text-4xl font-semibold ">About me</h2>
-        <p>
+        <h2 className="h2">About me</h2>
+        <p className="text">
           I began my software engineering journey in 2019, navigating through
           challenges and learning everything from scratch. What started as
           curiosity quickly turned into a deep passion for building full-stack
