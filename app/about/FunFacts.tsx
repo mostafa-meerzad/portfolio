@@ -11,12 +11,12 @@ const FunFacts = () => {
         {funFacts.map(({ title, Icon, desc }) => (
           <li
             key={title}
-            className="flex flex-col items-center md:items-start md:w-80 lg:w-96 xl:w-64"
+            className="flex flex-col items-center md:items-start md:w-80 lg:w-96 xl:w-64 gap-2"
           >
             <h3 className="flex items-center gap-3 text-2xl font-semibold">
-              {title} <Icon className="size-6" />
+              {title} <Icon className="size-7" />
             </h3>
-            <p>{desc}</p>
+            <p className="text-md leading-tight">{desc}</p>
           </li>
         ))}
       </ul>
