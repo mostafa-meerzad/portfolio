@@ -3,7 +3,6 @@
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Menu } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 import {
   Drawer,
@@ -13,6 +12,7 @@ import {
 } from "@/components/ui/drawer";
 import me from "../assets/me.png";
 import ModeToggle from "./ModeToggle";
+import NavItem from "./NavItem";
 
 const MobileDrawer = () => {
   return (
@@ -44,7 +44,7 @@ const MobileDrawer = () => {
           <ModeToggle />
         </div>
         {/* Navigation Items */}
-        <nav className="space-y-4 mt-5 ml-2">
+        <nav className="space-y-2 mt-5 ml-2">
           <NavItem
             href="/"
             title="Home"
@@ -71,21 +71,6 @@ const MobileDrawer = () => {
   );
 };
 
-function NavItem({
-  href,
-  title,
-  description,
-}: {
-  href: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <Link href={href} className="block">
-      <div className="text-lg font-medium">{title}</div>
-      <div className="text-sm text-muted-foreground">{description}</div>
-    </Link>
-  );
-}
+
 
 export default MobileDrawer;
