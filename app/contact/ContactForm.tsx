@@ -14,6 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import toast from "react-hot-toast";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name is too short" }),
@@ -31,9 +32,20 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
-    // Here you can integrate with Resend, Formspree, or send an email API
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    const response = await fetch("https://formspree.io/f/mzzvbnyy", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    });
+    if (response.ok) {
+      toast.success("Message sent!");
+      form.reset()
+    } else {
+      toast.error("Failed to send message.");
+    }
   };
 
   return (
@@ -49,7 +61,11 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} className="bg-zinc-300" />
+                <Input
+                  placeholder="Your Name"
+                  {...field}
+                  className="bg-zinc-300"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -63,7 +79,12 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="you@example.com" {...field} className="bg-zinc-300"/>
+                <Input
+                  type="email"
+                  placeholder="you@example.com"
+                  {...field}
+                  className="bg-zinc-300"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -82,7 +103,6 @@ const ContactForm = () => {
                   className="resize-none bg-zinc-300"
                   rows={6}
                   {...field}
-
                 />
               </FormControl>
               <FormMessage />
