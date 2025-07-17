@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Footer from "./Footer";
 import LayoutWrapper from "./LayoutWrapper";
+import ToasterComponent from "./ToasterComponent";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${urbanist.className}`}>
+        <ToasterComponent />
         <LayoutWrapper>
           <ThemeProvider
             attribute="class"
