@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { socialMedia } from "./constants/constants";
 import Link from "next/link";
@@ -6,6 +7,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -15,7 +17,7 @@ const Footer = () => {
         {socialMedia
           .slice(0, 4)
           .map(({ Img, hover, href, opts: { ariaLabel, rel, target } }) => (
-            <li key={href}>
+            <motion.li key={href} whileHover={{scale:1.2}}>
               <Link
                 href={href}
                 rel={rel}
@@ -31,7 +33,7 @@ const Footer = () => {
                   </TooltipContent>
                 </Tooltip>
               </Link>
-            </li>
+            </motion.li>
           ))}
       </ul>
     </footer>
