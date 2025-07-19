@@ -1,3 +1,4 @@
+"use client"
 import ProjectsList from "@/components/ui/ProjectsList";
 
 const ProjectsPage = () => {

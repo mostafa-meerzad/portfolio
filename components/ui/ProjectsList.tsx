@@ -1,3 +1,4 @@
+// "use client"
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -12,6 +13,7 @@ import { FaGithub } from "react-icons/fa";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
 import { projects } from "@/app/constants/constants";
+import { motion } from "framer-motion";
 
 const ProjectsList = ({ limit }: { limit?: number }) => {
   return (
@@ -33,7 +35,14 @@ const ProjectsList = ({ limit }: { limit?: number }) => {
           const contentCol = isEven ? "lg:col-start-1" : "lg:col-start-2";
 
           return (
-            <li key={name}>
+            <motion.li
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              // viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              key={name}
+              className="hover:scale-[1.015] transition-transform duration-300 ease-out hover:shadow-lg background"
+            >
               <Card className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[0.5fr_1fr] p-3 pt-6 sm:p-4 sm:pt-8 md:p-6 md:pt-8 lg:p-5  lg:gap-8 background items-center">
                 <CardHeader
                   className={`w-full flex flex-col items-center ${contentCol} lg:row-start-1 lg:items-start lg:self-end max-sm:px-0`}
@@ -51,7 +60,9 @@ const ProjectsList = ({ limit }: { limit?: number }) => {
                 <CardContent
                   className={`flex flex-col items-center gap-5 ${contentCol} lg:row-start-2 max-sm:p-0`}
                 >
-                  <p className="text-center text lg:text-start">{description}</p>
+                  <p className="text-center text lg:text-start">
+                    {description}
+                  </p>
                   <CardAction className="flex justify-center gap-10 w-full my-3 lg:justify-start">
                     <Link href={github}>
                       <Button>
@@ -75,7 +86,7 @@ const ProjectsList = ({ limit }: { limit?: number }) => {
                   className={imageClasses}
                 />
               </Card>
-            </li>
+            </motion.li>
           );
         })}
     </ul>
