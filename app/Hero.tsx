@@ -1,8 +1,15 @@
 "use client";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { Easing, motion } from "framer-motion";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import me from "./assets/mostafa.png";
 
 const Hero = () => {
+  const [isHovering, setIsHovering] = useState(false);
+  const router = useRouter();
+
   const parentVariant = {
     hidden: {},
     visible: {
@@ -92,7 +99,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2 }}
         >
-          <HoverBorderGradient containerClassName="rounded-lg">
+          <HoverBorderGradient
+            containerClassName="rounded-lg"
+            onClick={() => router.push("/contact")}
+          >
             Got a project?
           </HoverBorderGradient>
           <HoverBorderGradient
@@ -104,13 +114,53 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* ------------------ image section --------------------- */}
       <motion.div
-        className="col-start-1 col-end-2 row-start-2 md:row-start-1 md:col-start-4 md:col-end-8 lg:place-self-end lg:mx-0 border mx-auto rounded-full size-[400px] md:size-[380px] lg:size-[500px]  bg-[url('/avatar-bg-pattern.png')] bg-contain"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        className="flex justify-center items-center col-start-1 col-end-2 row-start-2 md:row-start-1 md:col-start-4 md:col-end-8 lg:place-self-end lg:mx-0 mx-auto size-[400px] md:size-[380px] lg:size-[500px] overflow-hidden relative rounded-full shadow-[0_20px_40px_rgba(50,50,93,0.45),0_16px_30px_rgba(0,0,0,0.35)]"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.3, duration: 0.6, ease: "easeOut" }}
-      />
+      >
+        <motion.div
+          className="absolute inset-0 z-0 rounded-full pointer-events-none"
+          style={{ filter: "blur(4px)" }}
+          initial={{
+            background:
+              "radial-gradient(20.7% 50% at 50% 0%, #ffffff 0%, rgba(255,255,255,0) 100%)",
+          }}
+          animate={{
+            background: [
+              `radial-gradient(20.7% 50% at 50% 0%, ${
+                isHovering ? "#1313e9" : "#ffffff"
+              } 0%, rgba(255,255,255,0) 100%)`,
+              "radial-gradient(16.6% 43.1% at 0% 50%, #ffffff 0%, rgba(255,255,255,0) 100%)",
+              `radial-gradient(20.7% 50% at 50% 100%, ${
+                isHovering ? "#800080" : "#ffffff"
+              } 0%, rgba(255,255,255,0) 100%)`,
+              "radial-gradient(16.2% 41.2% at 100% 50%, #ffffff 0%, rgba(255,255,255,0) 100%)",
+              `radial-gradient(20.7% 50% at 50% 0%, ${
+                isHovering ? "#1313e9" : "#ffffff"
+              } 0%, rgba(255,255,255,0) 100%)`,
+            ],
+          }}
+          transition={{
+            duration: 5,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        />
+
+        <div className="size-[99.5%] bg-[url('/avatar-bg-pattern.png')]  dark:bg-[url('/avatar-bg-pattern-dark.png')] bg-contain overflow-hidden relative rounded-full">
+          <Image
+            src={me}
+            alt="Mostafa"
+            width={600}
+            height={600}
+            className="relative z-10 w-full h-full object-contain rounded-full transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      </motion.div>
     </div>
   );
 };
