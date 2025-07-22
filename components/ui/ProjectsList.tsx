@@ -40,9 +40,9 @@ const ProjectsList = ({ limit }: { limit?: number }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, ease: easing, delay: i * 0.15 }}
-                className="hover:scale-[1.015] transition-transform duration-300 ease-out hover:shadow-lg"
+                className="hover:scale-[1.015] transition-transform duration-300 ease-out hover:shadow-lg background rounded-2xl "
               >
-                <Card className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[0.5fr_1fr] p-3 pt-6 sm:p-4 sm:pt-8 md:p-6 md:pt-8 lg:p-5  lg:gap-8 items-center">
+                <Card className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[0.5fr_1fr] p-3 pt-6 sm:p-4 sm:pt-8 md:p-6 md:pt-8 lg:p-5  lg:gap-8 items-center bg-inherit">
                   {/* Title + Tech */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}

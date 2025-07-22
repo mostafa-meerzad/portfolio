@@ -29,7 +29,7 @@ const Hero = () => {
       {/* ------------------ title section --------------------- */}
       <div className="col-start-1 col-end-2 row-start-1 md:col-start-1 md:col-end-6 flex flex-col items-center md:items-start gap-2 md:gap-1 lg:gap-6 z-10">
         <motion.p
-          className="flex flex-col items-center md:items-start gap-1 font-bold text-[2.5rem] md:text-[2.8rem] lg:text-5xl "
+          className="flex flex-col items-center md:items-start gap-1 lg:gap-4 font-bold text-[2.5rem] md:text-[2.8rem] lg:text-5xl "
           initial="hidden"
           animate="visible"
           variants={parentVariant}

@@ -84,13 +84,13 @@ const AboutMe = () => {
                 </motion.p>
                 <motion.p
                   variants={fadeInUp}
-                  className="mt-2 text-base text-muted-foreground"
+                  className="mt-2 text-base dark:text-muted-foreground text-zinc-600"
                 >
                   After overcoming adversity, I found purpose in technology.
                 </motion.p>
                 <motion.p
                   variants={fadeInUp}
-                  className="mt-2 text-base text-muted-foreground"
+                  className="mt-2 text-base dark:text-muted-foreground text-zinc-600"
                 >
                   I now build web apps with modern tools like Next.js, Prisma, and TypeScript.
                 </motion.p>

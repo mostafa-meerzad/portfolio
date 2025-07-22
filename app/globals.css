@@ -138,7 +138,7 @@
 
 @layer utilities {
   .background {
-    @apply bg-zinc-300/35 dark:bg-zinc-900/40 ;
+    @apply bg-zinc-300/40 dark:bg-zinc-900/40 ;
   }
   .text {
     @apply text-lg lg:text-xl lg:leading-relaxed;
