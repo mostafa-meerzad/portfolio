@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Easing, LazyMotion, domAnimation, m as motion } from "framer-motion";
 import Image from "next/image";
-import avatarPlaceHolder from "../../public/avatar-bg-pattern.png";
+import me from "../assets/me-casual.png";
 
 // Animations
 const container = {
@@ -41,7 +41,7 @@ const AboutMe = () => {
         {/* Image Section */}
         <motion.div
           variants={fadeInUp}
-          className="col-start-1 col-end-3 md:col-end-2"
+          className="col-start-1 col-end-3 md:col-end-2 relative shadow-xl/30 rounded-xl"
         >
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
@@ -50,15 +50,16 @@ const AboutMe = () => {
           >
             <Image
               alt="mostafa"
-              src={avatarPlaceHolder}
+              src={me}
               className="w-full h-[300px] md:h-[300px] lg:h-[400px] border object-cover rounded-xl"
             />
+            <div className="absolute inset-0 bg-radial-[at_53%_35%] from-transparent via-zinc-400/50 dark:via-zinc-700 to-zinc-700/40 dark:to-zinc-950 to-90% opacity-70 rounded-xl" />
           </motion.div>
         </motion.div>
 
         {/* Text Card Section */}
         <motion.div
-          className="col-start-1 col-end-3 md:col-start-2 h-full"
+          className="col-start-1 col-end-3 md:col-start-2 h-full background rounded-xl"
           variants={fadeInUp}
         >
           <Card className="h-full background">
@@ -71,7 +72,7 @@ const AboutMe = () => {
                   variants={fadeInUp}
                   className="block text-4xl mb-4"
                 >
-                  <span className="block">Hey! I’m</span>
+                  <span className="block mb-2">Hey! I’m</span>
                   <span className="font-bold block text-5xl text-primary">
                     Mostafa Meerzad
                   </span>
@@ -92,7 +93,8 @@ const AboutMe = () => {
                   variants={fadeInUp}
                   className="mt-2 text-base dark:text-muted-foreground text-zinc-600"
                 >
-                  I now build web apps with modern tools like Next.js, Prisma, and TypeScript.
+                  I now build web apps with modern tools like Next.js, Prisma,
+                  and TypeScript.
                 </motion.p>
               </motion.div>
             </CardContent>

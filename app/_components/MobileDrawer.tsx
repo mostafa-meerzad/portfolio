@@ -10,7 +10,7 @@ import {
   DrawerTitle,
   DrawerTrigger
 } from "@/components/ui/drawer";
-import me from "../assets/me.png";
+import me from "../assets/me-dark.png";
 import ModeToggle from "./ModeToggle";
 import NavItem from "./NavItem";
 

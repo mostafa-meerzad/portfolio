@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
-import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
 
 type Direction = "TOP" | "LEFT" | "BOTTOM" | "RIGHT";
 
@@ -58,7 +58,7 @@ export function HoverBorderGradient({
   return (
     <motion.div whileTap={{scale: .95}}>
       <Tag
-      onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {
+      onMouseEnter={() => {
         setHovered(true);
       }}
       onMouseLeave={() => setHovered(false)}
