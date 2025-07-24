@@ -53,7 +53,7 @@ const AboutMe = () => {
               src={me}
               className="w-full h-[300px] md:h-[300px] lg:h-[400px] border object-cover rounded-xl"
             />
-            <div className="absolute inset-0 bg-radial-[at_53%_35%] from-transparent via-zinc-400/50 dark:via-zinc-700 to-zinc-700/40 dark:to-zinc-950 to-90% opacity-70 rounded-xl" />
+            <div className="absolute inset-0 bg-radial-[at_53%_35%] from-transparent via-zinc-400/20 dark:via-zinc-700 to-zinc-700/30 dark:to-zinc-950 to-90% opacity-70 rounded-xl" />
           </motion.div>
         </motion.div>
 
@@ -62,7 +62,7 @@ const AboutMe = () => {
           className="col-start-1 col-end-3 md:col-start-2 h-full background rounded-xl"
           variants={fadeInUp}
         >
-          <Card className="h-full background">
+          <Card className="h-full !background">
             <CardContent className="h-full flex flex-col justify-center">
               <motion.div
                 className="text text-center md:text-start"
