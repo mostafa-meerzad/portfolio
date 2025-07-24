@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Urbanist } from "next/font/google";
-import structuredData from "../structured-data.json"; // adjust path
+import structuredData from "../structured-data.json";
 import Footer from "./Footer";
 import "./globals.css";
 import LayoutWrapper from "./LayoutWrapper";
@@ -56,8 +56,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head></head>
-      <body className={`${urbanist.className}`}>
+      <body className={urbanist.className}>
+        {/* ✅ JSON-LD structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
