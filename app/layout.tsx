@@ -1,12 +1,11 @@
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Urbanist } from "next/font/google";
-import structuredData from '../structured-data.json'; // adjust path
+import structuredData from "../structured-data.json"; // adjust path
 import Footer from "./Footer";
 import "./globals.css";
 import LayoutWrapper from "./LayoutWrapper";
 import Navbar from "./Navbar";
 import ToasterComponent from "./ToasterComponent";
-
 
 export const metadata = {
   title: "Mostafa Meerzad | Full Stack Developer",
@@ -50,7 +49,6 @@ const urbanist = Urbanist({
   weight: ["400", "500", "700", "800", "900"],
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,15 +56,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <head></head>
+      <body className={`${urbanist.className}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
           }}
         />
-      </head>
-      <body className={`${urbanist.className}`}>
         <ToasterComponent />
         <LayoutWrapper>
           <ThemeProvider
