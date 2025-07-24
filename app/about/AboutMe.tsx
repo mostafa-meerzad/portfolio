@@ -66,7 +66,7 @@ const AboutMe = () => {
           className="col-start-1 col-end-3 md:col-start-2 h-full background rounded-xl"
           variants={fadeInUp}
         >
-          <Card className="h-full !background">
+          <Card className="h-full background">
             <CardContent className="h-full flex flex-col justify-center">
               <motion.div
                 className="text text-center md:text-start"
