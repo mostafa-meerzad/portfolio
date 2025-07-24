@@ -103,13 +103,14 @@ const Hero = () => {
             containerClassName="rounded-lg"
             onClick={() => router.push("/contact")}
           >
-            Got a project?
+            Got a Project?
           </HoverBorderGradient>
           <HoverBorderGradient
             containerClassName="rounded-lg"
             className="dark:bg-white dark:text-black bg-black text-white "
+            onClick={() => router.push("/Mostafa_Meerzad_Resume.docx")}
           >
-            My resume
+            Download Resume
           </HoverBorderGradient>
         </motion.div>
       </div>
