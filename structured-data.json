@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mostafa Meerzad",
+  "url": "https://portfolio-navy-seven-11.vercel.app",
+  "sameAs": [
+    "https://github.com/mostafa-meerzad",
+    "https://www.linkedin.com/in/mostafa-meerzad-a753371b7/"
+  ],
+  "jobTitle": "Full Stack Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Freelancer"
+  }
+}
