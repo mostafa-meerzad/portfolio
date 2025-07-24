@@ -7,9 +7,9 @@ import {
 
 import Image from "next/image";
 import Link from "next/link";
-import { about } from "../constants/constants";
 import ListItem from "./ListItem";
 import me from "../assets/me-colored.png";
+import { about } from "../constants/about";
 
 const AboutNav = () => {
   return (

@@ -3,9 +3,9 @@ import {
   NavigationMenuItem,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { projects } from "../constants/constants";
 import ListItem from "./ListItem";
 import Link from "next/link";
+import { projects } from "../constants/projects";
 
 const ProjectsNav = () => {
   return (

@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
-import { advantages, services } from "./constants/constants";
+import { advantages } from "./constants/advantages";
 import Image from "next/image";
 import { Easing, LazyMotion, domAnimation, m as motion } from "framer-motion";
+import { services } from "./constants/services";
 
 const easing = [0.25, 0.8, 0.25, 1] as Easing;
 

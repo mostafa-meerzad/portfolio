@@ -1,7 +1,6 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
 import React from "react";
-import { certificates } from "../constants/constants";
 import Image from "next/image";
 import {
   LazyMotion,
@@ -10,6 +9,7 @@ import {
   easeOut,
   m as motion,
 } from "framer-motion";
+import { certificates } from "../constants/certificates";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },

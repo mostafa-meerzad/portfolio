@@ -1,5 +1,5 @@
 
-import { projects } from "@/app/constants/constants";
+import { projects } from "@/app/constants/projects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -77,12 +77,12 @@ const ProjectsList = ({ limit }: { limit?: number }) => {
                       viewport={{ once: true }}
                       className="flex justify-center gap-10 w-full my-3 lg:justify-start"
                     >
-                      <Link href={github}>
+                      <Link href={github} target="_blank">
                         <Button>
                           <FaGithub /> View Github
                         </Button>
                       </Link>
-                      <Link href={preview}>
+                      <Link href={preview} target="_blank">
                         <Button>
                           <MdOutlineArrowOutward /> View project
                         </Button>

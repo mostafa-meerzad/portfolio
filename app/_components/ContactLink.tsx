@@ -1,6 +1,6 @@
 import { NavigationMenuLink } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { ContactsType } from "../constants/constants";
+import { ContactsType } from "../constants/contacts";
 
 
 const ContactLink = ({icon, label, value, href}: ContactsType) => {

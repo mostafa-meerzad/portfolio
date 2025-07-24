@@ -3,7 +3,7 @@
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { m as motion } from "framer-motion";
 import Link from "next/link";
-import { socialMedia } from "../constants/constants";
+import { socialMedia } from "../constants/socialMedia";
 
 const SocialMedia = () => {
   return (

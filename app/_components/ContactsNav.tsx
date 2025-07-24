@@ -4,7 +4,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { contacts } from "../constants/constants";
+import { contacts } from "../constants/contacts";
 import ContactLink from "./ContactLink";
 
 const ContactsNav = () => {

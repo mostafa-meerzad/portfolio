@@ -1,6 +1,6 @@
 "use client";
 import { LazyMotion, domAnimation, easeOut, m as motion } from "framer-motion";
-import { funFacts } from "../constants/constants";
+import { funFacts } from "../constants/funFacts";
 
 const container = {
   hidden: { opacity: 0 },

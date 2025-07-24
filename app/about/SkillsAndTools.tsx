@@ -1,6 +1,6 @@
 "use client"
 import { m as motion, LazyMotion, domAnimation, easeOut } from "framer-motion";
-import { skillsAndTools } from "../constants/constants";
+import { skillsAndTools } from "../constants/skills";
 import { Badge } from "@/components/ui/badge";
 
 // Variants
