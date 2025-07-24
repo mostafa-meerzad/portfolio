@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://portfolio-navy-seven-11.vercel.app
+
+# Sitemaps
+Sitemap: https://portfolio-navy-seven-11.vercel.app/sitemap.xml

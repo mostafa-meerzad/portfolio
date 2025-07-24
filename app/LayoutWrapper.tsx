@@ -13,14 +13,14 @@ export default function LayoutWrapper({ children }: Props) {
   // Define background classes based on pathname
   const backgroundClass = (() => {
     if (pathname === "/")
-      return "bg-[url('/bg-home-light.png')] dark:bg-[url('/bg-home-dark.png')]";
+      return "bg-[url('/bg-home-light.webp')] dark:bg-[url('/bg-home-dark.webp')]";
     if (pathname.startsWith("/about"))
-      return "bg-[url('/bg-about-light.png')] dark:bg-[url('/bg-about-dark.png')]";
+      return "bg-[url('/bg-about-light.webp')] dark:bg-[url('/bg-about-dark.webp')]";
     if (pathname.startsWith("/projects"))
-      return "bg-[url('/bg-projects-light.png')] dark:bg-[url('/bg-projects-dark.png')]";
+      return "bg-[url('/bg-projects-light.webp')] dark:bg-[url('/bg-projects-dark.webp')]";
     if (pathname.startsWith("/contact"))
-      return "bg-[url('/bg-contact-light.png')] dark:bg-[url('/bg-contact-dark.png')]";
-    return "bg-[url('/bg-default.png')]";
+      return "bg-[url('/bg-contact-light.webp')] dark:bg-[url('/bg-contact-dark.webp')]";
+    return "bg-[url('/bg-default.webp')]";
   })();
 
   return (

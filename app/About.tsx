@@ -38,11 +38,17 @@ const About = () => {
               className="flex justify-start items-center gap-5 capitalize"
             >
               <Image
+              placeholder="blur"
+              width={50}
+              height={50}
                 src={img}
                 alt={title}
                 className="dark:hidden block w-[53px] h-[53px]"
               />
               <Image
+              placeholder="blur"
+              width={50}
+              height={50}
                 src={darkImg}
                 alt={title}
                 className="hidden dark:block w-[75px] h-[75px]"

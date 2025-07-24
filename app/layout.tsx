@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "Mostafa Meerzad Portfolio",
     images: [
       {
-        url: "/preview-image.png",
+        url: "/preview-image.webp",
         width: 1200,
         height: 630,
         alt: "Portfolio Preview",
@@ -39,7 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Mostafa Meerzad | Full Stack Developer",
     description: "Explore Mostafa's projects and experience.",
-    images: ["/preview-image.png"],
+    images: ["/preview-image.webp"],
   },
   metadataBase: new URL("https://portfolio-navy-seven-11.vercel.app"),
 };
@@ -57,7 +57,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={urbanist.className}>
-        {/* ✅ JSON-LD structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

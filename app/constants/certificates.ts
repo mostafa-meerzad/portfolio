@@ -1,9 +1,9 @@
 import { StaticImageData } from "next/image";
-import backendDevelopment from "../assets/backend-development.png";
-import codingSamurai from "../assets/coding-samurai.png";
-import frontendDevelopment from "../assets/frontend-development.png";
-import javascript from "../assets/javascript.png";
-import responsiveDesign from "../assets/responsive-web-design.png";
+import backendDevelopment from "../assets/backend-development.webp";
+import codingSamurai from "../assets/coding-samurai.webp";
+import frontendDevelopment from "../assets/frontend-development.webp";
+import javascript from "../assets/javascript.webp";
+import responsiveDesign from "../assets/responsive-web-design.webp";
 
 
 type Certificate = {

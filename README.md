@@ -59,9 +59,9 @@ You can reach me through:
 
 ## 📸 Screenshots
 
-| Home Page                       | About Page                        | Projects                                | Contacts                                |
-| ------------------------------- | --------------------------------- | --------------------------------------- | --------------------------------------- |
-| ![home](./screenshots/home.png) | ![about](./screenshots/about.png) | ![projects](./screenshots/projects.png) | ![contacts](./screenshots/contacts.png) |
+| Home Page                        | About Page                         | Projects                                 | Contacts                                 |
+| -------------------------------- | ---------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| ![home](./screenshots/home.webp) | ![about](./screenshots/about.webp) | ![projects](./screenshots/projects.webp) | ![contacts](./screenshots/contacts.webp) |
 
 ---
 

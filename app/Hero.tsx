@@ -4,7 +4,7 @@ import { Easing, motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import me from "./assets/me.png";
+import me from "./assets/me.webp";
 
 const Hero = () => {
   const [isHovering, setIsHovering] = useState(false);
@@ -152,12 +152,14 @@ const Hero = () => {
           }}
         />
 
-        <div className="size-[99.5%] bg-[url('/avatar-bg-pattern.png')]  dark:bg-[url('/avatar-bg-pattern-dark.png')] bg-contain overflow-hidden relative rounded-full">
+        <div className="size-[99.5%] bg-[url('/avatar-bg-pattern.webp')]  dark:bg-[url('/avatar-bg-pattern-dark.webp')] bg-contain overflow-hidden relative rounded-full">
           <Image
             src={me}
-            alt="Mostafa"
-            width={600}
-            height={600}
+            alt="Mostafa Meerzad"
+            width={500}
+            height={500}
+            priority
+            placeholder="blur"
             className="relative z-10 w-full h-full object-contain rounded-full transition-transform duration-500 hover:scale-105"
           />
         </div>

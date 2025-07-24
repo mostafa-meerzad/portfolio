@@ -108,6 +108,9 @@ const Certificates = () => {
                 >
                   <CardContent className="size-40 sm:size-56 md:size-72 overflow-hidden">
                     <Image
+                      width={400}
+                      height={400}
+                      placeholder="blur"
                       alt={title}
                       src={img}
                       className="w-full h-full object-cover"

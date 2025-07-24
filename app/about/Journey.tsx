@@ -2,8 +2,13 @@
 
 import Image from "next/image";
 import React from "react";
-import selfBuilt from "../assets/self-built.png";
-import { LazyMotion, domAnimation, easeInOut, m as motion } from "framer-motion";
+import selfBuilt from "../assets/self-built.webp";
+import {
+  LazyMotion,
+  domAnimation,
+  easeInOut,
+  m as motion,
+} from "framer-motion";
 
 // Animation Variants
 const fadeUp = {
@@ -77,6 +82,9 @@ const Journey = () => {
             variants={imageFade}
           >
             <Image
+              width={400}
+              height={400}
+              placeholder="blur"
               src={selfBuilt}
               alt="self built"
               className="w-full h-full object-contain md:object-cover rounded-xl"

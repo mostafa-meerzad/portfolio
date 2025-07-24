@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Easing, LazyMotion, domAnimation, m as motion } from "framer-motion";
 import Image from "next/image";
-import me from "../assets/me-casual.png";
+import me from "../assets/me-casual.webp";
 
 // Animations
 const container = {
@@ -49,9 +49,13 @@ const AboutMe = () => {
             transition={{ duration: 0.9, ease: "easeOut" }}
           >
             <Image
-              alt="mostafa"
+              alt="mostafa meerzad"
+              width={400}
+              height={400}
+              placeholder="blur"
+              priority
               src={me}
-              className="w-full h-[300px] md:h-[300px] lg:h-[400px] border object-cover rounded-xl"
+              className="w-full h-[400px] md:h-[300px] lg:h-[400px] border object-cover rounded-xl"
             />
             <div className="absolute inset-0 bg-radial-[at_53%_35%] from-transparent via-zinc-400/20 dark:via-zinc-700 to-zinc-700/30 dark:to-zinc-950 to-90% opacity-70 rounded-xl" />
           </motion.div>

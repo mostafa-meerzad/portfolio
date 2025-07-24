@@ -10,7 +10,7 @@ import {
   DrawerTitle,
   DrawerTrigger
 } from "@/components/ui/drawer";
-import me from "../assets/me-dark.png";
+import me from "../assets/me-dark.webp";
 import ModeToggle from "./ModeToggle";
 import NavItem from "./NavItem";
 
@@ -29,7 +29,7 @@ const MobileDrawer = () => {
           <div className="flex items-center gap-4 mt-2">
             <Image
               src={me}
-              alt="Mostafa"
+              alt="Mostafa meerzad"
               width={100}
               height={100}
               className="rounded-full border shadow-sm object-cover w-14 h-14"
