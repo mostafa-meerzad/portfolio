@@ -12,9 +12,9 @@ const HomeNav = () => {
         <Link href="/">Home</Link>
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <div className="w-[450px] h-[160px] dark:bg-[url('/bg-home-dark.png')] bg-[url('/bg-home-light.png')] bg-no-repeat bg-cover flex justify-center items-center rounded-sm relative z-10 animate-fade-in  ">
+        <div className="w-[450px] h-[160px] dark:bg-[url('/bg-home-dark.png')] bg-[url('/bg-home-light.png')] bg-no-repeat bg-cover flex justify-center items-center rounded-sm relative z-10 animate-fade-in ">
           <div
-            className=" px-4
+            className=" px-4  pb-5
            rounded-lg shadow-md"
           >
             <h3 className="text-lg font-semibold flex items-center gap-2 mb-2" >

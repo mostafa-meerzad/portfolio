@@ -55,17 +55,6 @@ const projects: ProjectType[] = [
   },
 
   {
-    name: "Chatty",
-    description:
-      "Chatty is a fully functional real-time chat application built with the MERN stack (MongoDB, Express.js, React, Node.js), combined with Socket.io for real-time communication. This project was developed during my internship at Coding Samurai, focused on delivering a responsive, scalable, and secure messaging platform.",
-    technologies: ["Next.js", "TypeScript", "Prisma", "Axios", "MySQL", "Zod"],
-
-    github: "https://github.com/mostafa-meerzad/realtime-chat-app.git",
-    preview: "https://realtime-chat-app-r0wc.onrender.com/",
-    img: chatty,
-  },
-
-  {
     name: "Issue Tracker",
     description:
       "A full-featured Issue Tracking System built with Next.js 14, TypeScript, Prisma, and MySQL. Designed for developers and teams to manage bugs, tasks, and feature requests with ease — complete with filtering, role-based assignment, validation, and interactive charts.",
