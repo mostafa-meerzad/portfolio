@@ -1,7 +1,13 @@
 "use client";
+
 import { Card, CardContent } from "@/components/ui/card";
-import React from "react";
-import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+
 import {
   LazyMotion,
   domAnimation,
@@ -9,6 +15,8 @@ import {
   easeOut,
   m as motion,
 } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
+import { useState } from "react";
 import { certificates } from "../constants/certificates";
 
 const fadeUp = {
@@ -56,6 +64,11 @@ const lineVariant = {
 };
 
 const Certificates = () => {
+  const [selectedCert, setSelectedCert] = useState<{
+    img: string | StaticImageData;
+    title: string;
+  } | null>(null);
+
   return (
     <LazyMotion features={domAnimation}>
       <motion.div
@@ -66,7 +79,6 @@ const Certificates = () => {
         variants={fadeUp}
       >
         {/* Left Text Block */}
-
         <motion.div
           className="flex flex-col items-center lg:items-start gap-5 lg:w-[40%]"
           variants={fadeRight}
@@ -99,7 +111,8 @@ const Certificates = () => {
             {certificates.map(({ img, title }, i) => (
               <motion.div key={title} variants={certItem}>
                 <Card
-                  className="absolute transition-transform duration-200 hover:scale-115 hover:z-10 hover:!rotate-0 bg-[#122234] dark:dark:bg-zinc-800"
+                  onClick={() => setSelectedCert({ img, title })}
+                  className="absolute cursor-pointer transition-transform duration-200 hover:scale-115 hover:z-10 hover:!rotate-0 bg-[#122234] dark:bg-zinc-800"
                   style={{
                     rotate: `${-45 + i * 15}deg`,
                     left: `${i * 2.5}rem`,
@@ -122,6 +135,28 @@ const Certificates = () => {
           </div>
         </motion.div>
       </motion.div>
+
+      {/* Modal for Certificate */}
+      <Dialog open={!!selectedCert} onOpenChange={() => setSelectedCert(null)}>
+        <DialogContent className="max-w-4xl w-full p-4">
+          {selectedCert && (
+            <>
+              <DialogHeader>
+                <DialogTitle>{selectedCert.title}</DialogTitle>
+              </DialogHeader>
+              <div className="w-full max-h-[70vh] overflow-auto rounded-md">
+                <Image
+                  src={selectedCert.img}
+                  alt={selectedCert.title}
+                  width={1000}
+                  height={1000}
+                  className="w-full h-auto object-contain rounded"
+                />
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </LazyMotion>
   );
 };
