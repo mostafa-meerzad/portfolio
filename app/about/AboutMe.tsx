@@ -57,7 +57,7 @@ const AboutMe = () => {
               src={me}
               className="w-full h-[400px] md:h-[300px] lg:h-[400px] border object-cover rounded-xl"
             />
-            <div className="absolute inset-0 bg-radial-[at_53%_35%] from-transparent via-zinc-400/20 dark:via-zinc-700 to-zinc-700/30 dark:to-zinc-950 to-90% opacity-70 rounded-xl" />
+            <div className="absolute inset-0 bg-radial-[at_53%_35%] from-transparent via-zinc-400/20 dark:via-zinc-600 to-zinc-700/30 dark:to-zinc-950 to-90% opacity-50 rounded-xl" />
           </motion.div>
         </motion.div>
 
