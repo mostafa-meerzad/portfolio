@@ -39,16 +39,16 @@ const About = () => {
             >
               <Image
               placeholder="blur"
-              width={50}
-              height={50}
+              width={80}
+              height={80}
                 src={img}
                 alt={title}
                 className="dark:hidden block w-[53px] h-[53px]"
               />
               <Image
               placeholder="blur"
-              width={50}
-              height={50}
+              width={80}
+              height={80}
                 src={darkImg}
                 alt={title}
                 className="hidden dark:block w-[75px] h-[75px]"
