@@ -154,6 +154,7 @@ const Hero = () => {
 
         <div className="size-[99.5%] bg-[url('/avatar-bg-pattern.webp')]  dark:bg-[url('/avatar-bg-pattern-dark.webp')] bg-contain overflow-hidden relative rounded-full">
           <Image
+            fetchPriority="high"
             src={me}
             alt="Mostafa Meerzad"
             width={500}
