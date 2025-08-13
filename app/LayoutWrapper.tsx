@@ -13,7 +13,6 @@ export default function LayoutWrapper({ children }: Props) {
   // Define background classes based on pathname
   const backgroundClass = (() => {
     if (pathname === "/")
-      // return "bg-[url('/bg-home-light.webp')] dark:bg-[url('/bg-home-dark.webp')] bg-[80%_100%] ";
       return "bg-[url('/bg-home-light-mobile.jpg')] dark:bg-[url('/bg-home-dark-mobile.jpg')] md:bg-[url('/bg-home-light.webp')] md:dark:bg-[url('/bg-home-dark.webp')] bg-contain bg-left ";
     if (pathname.startsWith("/about"))
       return "bg-[url('/bg-about-light-mobile.jpg')] dark:bg-[url('/bg-about-dark-mobile.jpg')] md:bg-[url('/bg-about-light.webp')] md:dark:bg-[url('/bg-about-dark.webp')] bg-contain bg-left";
