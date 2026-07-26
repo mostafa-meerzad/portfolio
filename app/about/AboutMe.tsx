@@ -13,6 +13,7 @@ import {
   staggerItem,
 } from "@/lib/motion-variants";
 import { useAnimationVariants } from "@/lib/use-reduced-motion";
+import { contributionPattern, githubProfile } from "@/app/constants/about";
 
 const AboutMe = () => {
   const slidePhoto = useAnimationVariants(slideInLeft);
@@ -24,7 +25,7 @@ const AboutMe = () => {
   return (
     <section
       className={
-        "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 2xl:grid-cols-3 gap-y-8 md:gap-x-5 xl:gap-12 2xl:gap-0 section-padding section-padding pt-10 bg-gradient-to-b from-[rgba(10,10,15,0.6)]/5 to-darkblue relative "
+        "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-y-8 md:gap-x-5 xl:gap-8 section-padding pt-10 bg-gradient-to-b from-[rgba(10,10,15,0.6)]/5 to-darkblue relative "
       }
     >
       <div className="flex justify-start items-center gap-3 absolute badge-position font-courier tracking-wide text-xs text-muted-foreground/70 uppercase">
@@ -33,7 +34,7 @@ const AboutMe = () => {
       </div>
       <motion.div
         className={
-          " flex flex-col xl:col-start-1 xl:col-end-3 2xl:col-end-2 [will-change:transform]"
+          "flex flex-col xl:col-span-4 xl:self-center [will-change:transform]"
         }
         variants={slidePhoto}
         initial="hidden"
@@ -53,7 +54,7 @@ const AboutMe = () => {
 
       <motion.div
         className={
-          "xl:col-start-3 xl:col-end-6 2xl:col-span-2 flex flex-col justify-center items-center md:items-start gap-3 xl:p-10 xl:pt-0 "
+          "xl:col-span-5 xl:self-center flex flex-col justify-center items-center md:items-start gap-3 xl:p-10 xl:pt-0 "
         }
         variants={staggerBio}
         initial="hidden"
@@ -79,7 +80,7 @@ const AboutMe = () => {
         <motion.p
           variants={item}
           className={
-            "font-georgia text-sm lg:text-base text-[#c6c6c699] text-center md:text-start 2xl:w-4/6 max-w-[590px]  mt-4 leading-relaxed"
+            "font-georgia text-sm lg:text-base text-[#c6c6c699] text-center md:text-start  max-w-[590px]  mt-4 leading-relaxed"
           }
         >
           Self-taught full-stack developer based in{" "}
@@ -100,7 +101,7 @@ const AboutMe = () => {
         <motion.p
           variants={item}
           className={
-            "font-georgia text-sm lg:text-base text-[#c6c6c699] text-center md:text-start 2xl:w-4/6 max-w-[590px]  mt-2 leading-relaxed"
+            "font-georgia text-sm lg:text-base text-[#c6c6c699] text-center md:text-start  max-w-[590px]  mt-2 leading-relaxed"
           }
         >
           Now I&apos;m{" "}
@@ -144,7 +145,7 @@ const AboutMe = () => {
 
       <motion.div
         className={
-          "md:col-span-2 xl:col-start-1 xl:col-end-6 2xl:col-start-3 px-5 md:pr-7  mt-10 2xl:pr-12  2xl:absolute self-center xl:self-end 2xl:items-end justify-center w-full h-full xl:h-fit 2xl:h-full flex flex-col md:flex-row max-md:items-center 2xl:flex-col md:items-center gap-10 md:gap-5 lg:gap-20 2xl:gap-5 perspective-normal max-md:pr-12"
+          "md:col-span-2 xl:col-span-3 xl:self-center mt-10 xl:mt-0 px-5 md:pr-7 max-md:pr-12 flex flex-col justify-center items-center perspective-normal"
         }
         variants={ghStagger}
         initial="hidden"
@@ -154,7 +155,7 @@ const AboutMe = () => {
         <motion.div
           variants={fade}
           className={
-            "flex flex-col justify-center gap-1.5 xl:gap-2 px-5 xl:px-8 py-2 md:py-5 bg-gradient-to-r from-transparent to-primary/30 rounded-xl w-sm md:w-[28rem] lg:w-[33rem] 2xl:w-[25rem] font-georgia text-[14px]  relative md:self-end md:-top-5 [will-change:transform]  border-transparent"
+            "flex flex-col gap-3 px-5 xl:px-7 py-5 xl:py-6 bg-gradient-to-br from-[rgba(23,58,45,0.55)] to-[rgba(12,26,21,0.55)] rounded-xl border border-primary/20 w-full max-md:max-w-sm md:w-[28rem] lg:w-[32rem] xl:w-full xl:max-w-none font-georgia relative [will-change:transform]"
           }
           style={{ rotateY: "-18deg" }}
           whileHover={{
@@ -165,84 +166,76 @@ const AboutMe = () => {
           }}
           transition={{ duration: 0.2 }}
         >
+          {/* Header */}
+          <div className="flex justify-between items-center">
+            <span className="font-courier text-xs text-gray-300 tracking-wider">
+              {githubProfile.handle}
+            </span>
+            <span className="flex items-center gap-1.5 text-primary font-courier text-[10px] tracking-widest">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
+              {githubProfile.status}
+            </span>
+          </div>
+
+          {/* Stats */}
+          <div className="flex flex-col gap-3 mt-1">
+            <div className="flex items-baseline gap-2">
+              <span className="font-georgia text-xl text-white">
+                {githubProfile.repoCount}
+              </span>
+              <span className="font-courier text-[10px] text-muted-foreground">
+                public repositories
+              </span>
+            </div>
+            <div className="flex items-baseline gap-2">
+              <span className="font-georgia text-xl text-white">
+                {githubProfile.yearsLabel}
+              </span>
+              <span className="font-courier text-[10px] text-muted-foreground">
+                active · {githubProfile.activePeriod}
+              </span>
+            </div>
+            <div className="flex items-baseline gap-2">
+              <span className="font-georgia text-xl text-primary">
+                {githubProfile.rankLabel}
+              </span>
+              <span className="font-courier text-[10px] text-muted-foreground">
+                {githubProfile.rankSuffix}
+              </span>
+            </div>
+          </div>
+
+          {/* Contribution strip */}
           <div
-            className={
-              "absolute inset-0 bg-gradient-to-r from-darkblue/70 to-black/5"
-            }
-          ></div>
-
-          <div className="flex justify-between items-center ">
-            <h2 className={"text-gray-300 font-georgia text-base"}>
-              mostafa-meerzad
-            </h2>
-            <span
-              className={
-                "text-[#ffa55099] text-xs xl:text-sm font-georgia tracking-wider"
-              }
-            >
-              lost access
-            </span>
-          </div>
-          <span className={"text-muted-foreground"}>
-            <strong className={"text-sx xl:text-base text-white"}>160+</strong>{" "}
-            public repos{" "}
-          </span>
-          <span
-            className={
-              "text-muted-foreground font-courier text-xs xl:text-[0.76rem]"
-            }
+            className="grid gap-[3px] mt-1"
+            style={{ gridTemplateColumns: "repeat(17, 1fr)" }}
+            aria-hidden
           >
-            <strong className={"text-base text-white"}>6</strong>{" "}
-            <strong className={"text-white"}>years</strong> of projects still
-            publicly viewable
-          </span>
-          <div className={"flex justify-between"}>
-            <span className={"text-mute text-xs xl:text-base"}>2020-2026</span>{" "}
-            <span className={"uppercase font-courier text-xs tracking-wider"}>
-              github account
-            </span>
+            {contributionPattern.map((opacity, i) => (
+              <motion.div
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                key={i}
+                className="aspect-square rounded-[2px] bg-primary"
+                style={{ opacity }}
+              />
+            ))}
           </div>
-        </motion.div>
 
-        <motion.div
-          variants={fade}
-          className={
-            "flex flex-col justify-center gap-2 md:gap-3 2xl:gap-2 px-5 xl:px-8 py-2 md:py-5 bg-gradient-to-r from-gray-800/30 to-primary/50 rounded-xl w-sm md:w-[22rem] lg:w-[25rem] font-georgia text-sm  relative border-r border-r-primary [will-change:transform]  border-transparent"
-          }
-          style={{ rotateY: "-20deg" }}
-          whileHover={{
-            y: -2,
-            borderColor: "rgba(62,207,142,0.3)",
-            rotateY: "-15deg",
-            scale: 1.02,
-          }}
-          transition={{ duration: 0.2 }}
-        >
-          <div className="flex justify-between items-center ">
-            <h2 className={"text-gray-300 font-georgia text-base"}>
-              mostafa-mz-code
-            </h2>
-            <span
-              className={"text-primary text-sm font-georgia tracking-wider"}
+          {/* Footer */}
+          <div className="flex justify-between items-center border-t border-primary/15 pt-3 mt-1">
+            <span className="font-courier text-[10px] text-muted-foreground/60 tracking-widest uppercase">
+              GitHub Account
+            </span>
+            <Link
+              href={githubProfile.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary text-base leading-none hover:opacity-70 transition-opacity"
+              aria-label="Visit GitHub profile"
             >
-              Active
-            </span>
-          </div>
-
-          <span
-            className={
-              "text-muted-foreground font-courier text-xs xl:text-base"
-            }
-          >
-            Production-focused work
-          </span>
-          <div className={"flex justify-between"}>
-            <span className={"text-muted-foreground text-xs xl:text-base"}>
-              CURRENT
-            </span>{" "}
-            <span className={"uppercase font-courier text-xs tracking-wider"}>
-              github account
-            </span>
+              ↗
+            </Link>
           </div>
         </motion.div>
       </motion.div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About section — single GitHub card reference</title>
+<style>
+  body { margin: 0; background: #060908; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: system-ui, -apple-system, sans-serif; }
+  .wrap { width: 100%; max-width: 920px; }
+  .serif { font-family: Georgia, 'Times New Roman', serif; }
+  .mono { font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div style="background:#0a0e0d;border-radius:12px;padding:2.25rem 2rem;position:relative;overflow:hidden">
+
+<div class="mono" style="font-size:11px;letter-spacing:.22em;color:#6b746f;margin-bottom:2rem">ABOUT ME <span style="color:#2f3a35">———————</span></div>
+
+<div style="display:grid;grid-template-columns:120px minmax(0,1fr) 240px;gap:28px;align-items:center">
+
+  <div style="height:300px;border-radius:6px;background:linear-gradient(150deg,#1a2420,#0d1512);border:1px solid #1e2a25;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px">
+    <span class="mono" style="font-size:10px;color:#4a544f;letter-spacing:.1em">photo</span>
+  </div>
+
+  <div>
+    <div class="serif" style="font-size:40px;line-height:1.02;color:#f2f4f2;font-weight:400">Mostafa<br><span style="color:#34d399">Meerzad</span></div>
+    <div class="mono" style="font-size:11px;letter-spacing:.12em;color:#6b746f;margin:14px 0 18px">Full-stack Engineer · Product-Focused · AI Curious</div>
+    <p style="font-size:13.5px;line-height:1.65;color:#9aa39e;margin:0 0 12px">Self-taught full-stack developer based in <span style="color:#dfe4e1;font-weight:500">Kabul, Afghanistan</span>. I started in 2019 with a university seat and a lot of curiosity. When that path closed, I <span style="color:#34d399;font-style:italic">taught myself</span> everything from scratch.</p>
+    <p style="font-size:13.5px;line-height:1.65;color:#9aa39e;margin:0">Now I'm <span style="font-style:italic;color:#cfd5d1">shipping production software</span> for real clients at <span style="color:#34d399">Webistan.cloud</span> — and open to my next challenge.</p>
+  </div>
+
+  <div style="background:linear-gradient(155deg,rgba(23,58,45,.55),rgba(12,26,21,.55));border:1px solid rgba(52,211,153,.22);border-radius:14px;padding:20px 18px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+      <span class="mono" style="font-size:12px;color:#c9d0cc">mostafa-meerzad</span>
+      <span class="mono" style="font-size:10px;letter-spacing:.08em;color:#34d399;display:flex;align-items:center;gap:5px"><span style="width:6px;height:6px;border-radius:50%;background:#34d399;display:inline-block"></span>ACTIVE</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:13px;margin-bottom:18px">
+      <div style="display:flex;align-items:baseline;gap:9px"><span class="serif" style="font-size:22px;color:#f2f4f2">160+</span><span class="mono" style="font-size:10.5px;color:#7c857f">public repositories</span></div>
+      <div style="display:flex;align-items:baseline;gap:9px"><span class="serif" style="font-size:22px;color:#f2f4f2">6 yrs</span><span class="mono" style="font-size:10.5px;color:#7c857f">active · 2020–present</span></div>
+      <div style="display:flex;align-items:baseline;gap:9px"><span class="serif" style="font-size:22px;color:#34d399">Top 26</span><span class="mono" style="font-size:10.5px;color:#7c857f">committer · Afghanistan</span></div>
+    </div>
+
+    <div id="contrib" style="display:grid;grid-template-columns:repeat(17,1fr);gap:3px;margin-bottom:18px"></div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(52,211,153,.15);padding-top:13px">
+      <span class="mono" style="font-size:10px;letter-spacing:.1em;color:#8a938f">GITHUB ACCOUNT</span>
+      <span style="font-size:15px;color:#34d399">↗</span>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+<script>
+const g=document.getElementById('contrib');const s=['rgba(52,211,153,.08)','rgba(52,211,153,.22)','rgba(52,211,153,.45)','rgba(52,211,153,.75)'];
+for(let i=0;i<51;i++){const d=document.createElement('div');d.style.cssText='aspect-ratio:1;border-radius:2px;background:'+s[Math.floor(Math.random()*4)];g.appendChild(d);}
+</script>
+</body>
+</html>

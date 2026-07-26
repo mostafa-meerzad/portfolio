@@ -213,7 +213,7 @@ const topProjects: TopProjectType[] = [
   {
     title: "Chatty",
     desc: "Real-time MERN chat app with Socket.io. Auth, scalable messaging, and responsive UI.",
-    techs: ["MERN", "Socket.id", "JWT"],
+    techs: ["MERN", "Socket.io", "JWT"],
     subtitle: "02 · Personal",
     repo: {
       href: "https://github.com/mostafa-meerzad/realtime-chat-app.git",
