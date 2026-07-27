@@ -43,8 +43,21 @@ export function moderateInput(content: string): ModerationResult {
   return { pass: true };
 }
 
-export const JAILBREAK_RESPONSE =
-  "Nice try 😄 I'm Mozi — I only answer questions about Mostafa's work and experience. What would you like to know about him?";
+const JAILBREAK_RESPONSES = [
+  "Nice try 😄 I'm Mozi — I only answer questions about Mostafa's work and experience. What would you like to know about him?",
+  "Ha, clever — but I'm just here to talk about Mostafa. Ask me about his projects, stack, or background!",
+  "I appreciate the creativity, but I'm Mozi and that's not changing. What do you want to know about Mostafa?",
+  "That's not really my lane. I'm here to tell you about Mostafa — his skills, projects, and experience. Fire away!",
+];
 
-export const OFF_TOPIC_RESPONSE =
-  "I'm only here to talk about Mostafa — his projects, stack, experience, and availability. Ask me anything about him!";
+const OFF_TOPIC_RESPONSES = [
+  "I'm only here to talk about Mostafa — his projects, stack, experience, and availability. Ask me anything about him!",
+  "That's a bit outside what I do. I'm built to talk about Mostafa specifically — want to know about his tech stack or projects?",
+  "Not quite my area! I'm Mozi, Mostafa's personal assistant. Ask me about his work, background, or how to reach him.",
+  "I'll have to pass on that one — I'm focused on Mostafa. What would you like to know about him?",
+];
+
+const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
+
+export const JAILBREAK_RESPONSE = () => pick(JAILBREAK_RESPONSES);
+export const OFF_TOPIC_RESPONSE = () => pick(OFF_TOPIC_RESPONSES);

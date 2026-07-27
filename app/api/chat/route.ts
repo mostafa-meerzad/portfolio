@@ -78,8 +78,8 @@ export async function POST(req: NextRequest) {
 
       const reply =
         moderation.reason === "jailbreak"
-          ? JAILBREAK_RESPONSE
-          : OFF_TOPIC_RESPONSE;
+          ? JAILBREAK_RESPONSE()
+          : OFF_TOPIC_RESPONSE();
 
       await saveMessage({
         conversationId: conversation.id,
@@ -110,6 +110,7 @@ export async function POST(req: NextRequest) {
     const completion = await groq.chat.completions.create({
       model: GROQ_MODEL,
       max_tokens: MAX_RESPONSE_TOKENS,
+      temperature: 0.8,
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
         ...historyMessages,
