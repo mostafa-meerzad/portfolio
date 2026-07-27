@@ -96,7 +96,7 @@ const Hero = () => {
                 transition={{ duration: 0.15 }}
               >
                 <Button asChild variant={"outline"}>
-                  <a href="/Mostafa_Meerzad_Resume.pdf" download>
+                  <a href="/Mostafa-Meerzad-Full-Stack-Developer.pdf" download>
                     Download Resume
                   </a>
                 </Button>
@@ -141,7 +141,12 @@ const Hero = () => {
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.15 }}
             >
-              <Button  onClick={() => router.push("/projects")} variant={"default"}>See My Work</Button>
+              <Button
+                onClick={() => router.push("/projects")}
+                variant={"default"}
+              >
+                See My Work
+              </Button>
             </motion.div>
             <motion.div
               className="[will-change:transform]"
