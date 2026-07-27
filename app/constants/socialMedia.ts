@@ -48,8 +48,8 @@ const socialMedia: SocialMediaType[] = [
   },
   {
     Img: FaGithub,
-    href: "https://github.com/mostafa-mz-code",
-    link: "github.com/mostafa-mz-code",
+    href: "https://github.com/mostafa-meerzad",
+    link: "github.com/mostafa-meerzad",
     btnLabel: "view",
     label: "GitHub · Active",
     opts: {
@@ -98,7 +98,7 @@ const footerSocialMedia: FooterSocialMediaType[] = [
   },
 
   {
-    href: "https://github.com/mostafa-mz-code",
+    href: "https://github.com/mostafa-meerzad",
     label: "GitHub ",
     opts: {
       target: "_blank",

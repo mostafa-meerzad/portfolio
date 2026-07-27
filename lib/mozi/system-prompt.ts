@@ -115,7 +115,7 @@ PERSONAL PROJECTS (selected):
    Stack: Node.js, Express, React, MongoDB, JWT, Axios
 
 GITHUB ACCOUNTS:
-Active (current work): github.com/mostafa-mz-code
+Active (current work): github.com/mostafa-meerzad
 Archive (160+ repos, 6 years of projects, access lost but publicly viewable):
 github.com/mostafa-meerzad
 
