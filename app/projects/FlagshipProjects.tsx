@@ -47,7 +47,7 @@ const Project = ({
               {badges.map((item, index) => (
                 <li
                   key={index}
-                  className={` px-4 py-1 border rounded-full text-muted-foreground text-[.7rem] font-courier w-fit ${index === 0 ? "bg-primary/20 border-primary/40" : "bg-muted/70 border-muted-foreground/20"} cursor-default`}
+                  className={` px-4 py-1 border rounded-full text-[.7rem] font-courier w-fit ${index === 0 ? "bg-primary/20 border-primary/40 text-muted-foreground " : "bg-amber-500/20 border-amber-500/70 text-amber-500"} cursor-default`}
                 >
                   {item}
                 </li>
@@ -104,10 +104,10 @@ const Project = ({
               ) : (
                 <div
                   className={
-                    "px-5 py-2 bg-darkblue/20 text-muted-foreground/50 text-xs border rounded-md font-courier"
+                    "px-5 py-2 bg-darkblue/20 text-primary text-xs border border-amber-500/50 rounded-md font-courier"
                   }
                 >
-                  Internal · not public
+                  Launches Soon
                 </div>
               )}
             </div>
