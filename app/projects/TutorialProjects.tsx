@@ -7,6 +7,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { motion, useInView } from "motion/react";
 import { fadeUp, staggerContainer } from "@/lib/motion-variants";
 import { useAnimationVariants } from "@/lib/use-reduced-motion";
+import { tutorialProjects } from "../constants/projects";
 
 const TutorialProjects = () => {
   const ref = useRef(null);
@@ -36,151 +37,83 @@ const TutorialProjects = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <motion.div
-          variants={fade}
-          className={`flex flex-col items-start justify-start gap-5 border border-primary/8 px-7 py-8 w-full bg-gradient-to-bl from-primary/6 to-darkblue `}
-        >
-          <h3 className={"text-xl font-georgia text-white/80"}>
-            Nike Landing Page
-          </h3>
-          <p className={`font-courier text-muted-foreground/80 text-sm  `}>
-            A clean, responsive Nike-themed landing page built with React and
-            Tailwind CSS.
-          </p>
+        {tutorialProjects.map((project) => (
+          <motion.div
+            key={project.name}
+            variants={fade}
+            className={`flex flex-col items-start justify-start gap-5 border border-primary/8 px-7 py-8 w-full bg-gradient-to-bl  to-darkblue from-gray-500/10`}
+          >
+            <h3 className={"text-xl font-georgia text-white/80 "}>
+              {project.name}
+            </h3>
+            <p className={`font-courier text-muted-foreground/80 text-sm  `}>
+              {project.description}
+            </p>
 
-          <ul className={"flex flex-wrap md:flex-row gap-3"}>
-            {["React.js", "Tailwindcss", "Vite"].map((tech, i) => (
-              <motion.li
-                key={i}
-                className={
-                  "border border-muted px-3 py-0.5 rounded-full bg-muted/30 text-[.65em] font-courier text-muted-foreground/70 [will-change:transform] cursor-default"
-                }
-                whileHover={{
-                  borderColor: "rgba(62,207,142,0.3)",
-                  color: "rgba(255,255,255,0.7)",
-                }}
+            <ul className={"flex flex-wrap md:flex-row gap-3"}>
+              {project.technologies.map((tech, i) => (
+                <motion.li
+                  key={i}
+                  className={
+                    "border border-muted px-3 py-0.5 rounded-full bg-muted/30 text-[.65em] font-courier text-muted-foreground/70 [will-change:transform] cursor-default"
+                  }
+                  whileHover={{
+                    borderColor: "rgba(62,207,142,0.3)",
+                    color: "rgba(255,255,255,0.7)",
+                  }}
+                  transition={{ duration: 0.15 }}
+                >
+                  {tech}
+                </motion.li>
+              ))}
+            </ul>
+
+            <div className={"flex flex-row gap-5 mt-2"}>
+              <motion.div
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
                 transition={{ duration: 0.15 }}
               >
-                {tech}
-              </motion.li>
-            ))}
-          </ul>
-
-          <div className={"flex flex-row gap-5 mt-2"}>
-            <motion.div
-              className="[will-change:transform]"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.15 }}
-            >
-              <Link
-                href={"https://github.com/mostafa-meerzad/nike.git"}
-                rel={"noopener noreferrer"}
-                className={
-                  "border border-muted-foreground/30 px-6 py-1 rounded-sm bg-muted/20 font-courier text-xs"
-                }
-              >
-                GitHub
-              </Link>
-            </motion.div>
-            <motion.div
-              className="[will-change:transform]"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.15 }}
-            >
-              <Link
-                href={"https://serene-biscotti-6c2764.netlify.app/"}
-                rel={"noopener noreferrer"}
-                className={
-                  " flex justify-center items-center gap-2 border border-primary/20 px-6 py-1 rounded-sm bg-primary/10 font-courier text-xs text-primary"
-                }
-              >
-                Live Demo <MdOutlineArrowOutward />
-              </Link>
-            </motion.div>
-          </div>
-          <em className={"text-xs text-muted-foreground"}>
-            Tutorial · JavaScript Mastery
-          </em>
-        </motion.div>
-
-        <motion.div
-          variants={fade}
-          className={`flex flex-col items-start justify-start gap-5 border border-primary/8 px-7 py-8 w-full bg-gradient-to-bl  to-darkblue from-gray-500/10`}
-        >
-          <h3 className={"text-xl font-georgia text-white/80 "}>
-            Space Tourism Landing Page
-          </h3>
-          <p className={`font-courier text-muted-foreground/80 text-sm  `}>
-            65 A sleek, multi-page space tourism website built with Next.js 13
-            App Router, Tailwind CSS, and TypeScript.
-          </p>
-
-          <ul className={"flex flex-wrap md:flex-row gap-3"}>
-            {["Next.js", "Tailwindcss", "Framer Motion"].map((tech, i) => (
-              <motion.li
-                key={i}
-                className={
-                  "border border-muted px-3 py-0.5 rounded-full bg-muted/30 text-[.65em] font-courier text-muted-foreground/70 [will-change:transform] cursor-default"
-                }
-                whileHover={{
-                  borderColor: "rgba(62,207,142,0.3)",
-                  color: "rgba(255,255,255,0.7)",
-                }}
+                <Link
+                  target={"_blank"}
+                  href={project.github!}
+                  rel={"noopener noreferrer"}
+                  className={
+                    "border border-muted-foreground/30 px-6 py-1 rounded-sm bg-muted/20 font-courier text-xs"
+                  }
+                >
+                  GitHub
+                </Link>
+              </motion.div>
+              <motion.div
+                className="[will-change:transform]"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
                 transition={{ duration: 0.15 }}
               >
-                {tech}
-              </motion.li>
-            ))}
-          </ul>
-
-          <div className={"flex flex-row gap-5 mt-2"}>
-            <motion.div
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.15 }}
-            >
-              <Link
-                href={
-                  "https://github.com/mostafa-meerzad/space-tourism-next.js.git"
-                }
-                rel={"noopener noreferrer"}
-                className={
-                  "border border-muted-foreground/30 px-6 py-1 rounded-sm bg-muted/20 font-courier text-xs"
-                }
-              >
-                GitHub
-              </Link>
-            </motion.div>
-            <motion.div
-              className="[will-change:transform]"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.15 }}
-            >
-              <Link
-                href={"https://space-tourism-mocha-three.vercel.app/"}
-                rel={"noopener noreferrer"}
-                className={
-                  " flex justify-center items-center gap-2 border border-primary/20 px-6 py-1 rounded-sm bg-primary/10 font-courier text-xs text-primary"
-                }
-              >
-                Live Demo <MdOutlineArrowOutward />
-              </Link>
-            </motion.div>
-          </div>
-          <em className={"text-xs text-muted-foreground"}>
-            Frontend Mentor challenge
-          </em>
-        </motion.div>
-
+                <Link
+                  target={"_blank"}
+                  href={project.preview!}
+                  rel={"noopener noreferrer"}
+                  className={
+                    " flex justify-center items-center gap-2 border border-primary/20 px-6 py-1 rounded-sm bg-primary/10 font-courier text-xs text-primary"
+                  }
+                >
+                  Preview <MdOutlineArrowOutward />
+                </Link>
+              </motion.div>
+            </div>
+            <em className={"text-xs text-muted-foreground"}>
+              {project.source}
+            </em>
+          </motion.div>
+        ))}
         <motion.a
           href={"https://github.com/mostafa-meerzad"}
           target={"_blank"}
           variants={fade}
           className={
-            "flex flex-col justify-center items-center max-lg:h-64 text-center border border-primary/8 text-muted-foreground bg-radial from-primary/10 to-darkblue group"
+            "flex flex-col justify-center items-center max-lg:h-64 text-center border border-primary/8 text-muted-foreground bg-radial from-primary/10 to-darkblue group md:col-span-2"
           }
         >
           <GoPlus className={"size-8 group-hover:size-12 transition-all"} />

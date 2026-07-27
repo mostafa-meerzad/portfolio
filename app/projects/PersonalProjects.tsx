@@ -104,7 +104,7 @@ const Project = ({
               " flex justify-center items-center gap-2 border border-primary/20 px-6 py-1 rounded-sm bg-primary/10 font-courier text-xs text-primary"
             }
           >
-            Live Demo <MdOutlineArrowOutward />
+            Preview <MdOutlineArrowOutward />
           </Link>
         </motion.div>
       </div>

@@ -4,6 +4,8 @@ import gameHubMobile from "../assets/game-hub-mobile.webp";
 import promptopiaMobile from "../assets/promptopia-mobile.webp";
 import spaceTourismMobile from "../assets/space-tourism-mobile.webp";
 import urlShortenerMobile from "../assets/urlshortener-mobile.webp";
+import nikeMobile from "../assets/nike-mobile.webp";
+import nikeDesktop from "../assets/nike-desktop.webp";
 
 import movieFlexDesktop from "../assets/movieflex-home-screen.png";
 import gameHubDesktop from "../assets/game-hub-desktop.webp";
@@ -170,25 +172,26 @@ const personalProjects: ProjectType[] = [
     desktopImg: chattyDesktop,
     mobileImg: chattyMobile,
   },
+
   {
-    type: "02 · Full Stack · Internship Build",
-    name: "Chatty",
+    type: "03 · Full Stack · MERN Custom Build",
+    name: "Shortly",
     description:
-      "Real-time chat app built during the Coding Samurai internship. Socket.io messaging, JWT auth, online presence, and a responsive UI.",
+      "A URL shortener built with the MERN stack — CRUD, custom aliases, JWT auth for registered users, guest shortening for everyone else.",
     technologies: [
-      "MongoDB",
+      "Node.js",
       "Express.js",
       "React.js",
-      "Node.js",
-      "Socket.io",
+      "MongoDB",
       "JWT",
+      "Axios",
     ],
-    github: "https://github.com/mostafa-meerzad/realtime-chat-app.git",
+    github: "https://github.com/mostafa-meerzad/url-shortener.git",
     // NOTE: Render free tier — cold starts can take ~1 min. Consider a
     // "(may take a moment to wake)" hint next to the demo button.
-    preview: "https://realtime-chat-app-r0wc.onrender.com/",
-    desktopImg: chattyDesktop,
-    mobileImg: chattyMobile,
+    preview: "https://url-shortener-1-09s5.onrender.com/",
+    desktopImg: urlShortenerDesktop,
+    mobileImg: urlShortenerMobile,
   },
 ];
 
@@ -247,24 +250,16 @@ const tutorialProjects: ProjectType[] = [
     mobileImg: spaceTourismMobile,
   },
   {
-    type: "Full Stack · MERN",
-    name: "Shortly",
-    source: "Learning build · Frontend Mentor UI + docs-driven backend",
+    type: "Frontend · Landing page",
+    name: "Nike Landing Page",
+    source: "JS Mastery tutorial",
     description:
-      "A URL shortener built with the MERN stack — CRUD, custom aliases, JWT auth for registered users, guest shortening for everyone else.",
-    technologies: [
-      "Node.js",
-      "Express.js",
-      "React.js",
-      "MongoDB",
-      "JWT",
-      "Axios",
-    ],
-    github: "https://github.com/mostafa-meerzad/url-shortener.git",
-    // NOTE: Render free tier — cold starts apply here too.
-    preview: "https://url-shortener-1-09s5.onrender.com/",
-    desktopImg: urlShortenerDesktop,
-    mobileImg: urlShortenerMobile,
+      "A clean, responsive Nike-themed landing page built with React and Tailwind CSS.",
+    technologies: ["React.js", "Tailwindcss", "Vite"],
+    github: "https://github.com/mostafa-meerzad/nike.git",
+    preview: "https://serene-biscotti-6c2764.netlify.app/",
+    desktopImg: nikeDesktop,
+    mobileImg: nikeMobile,
   },
 ];
 
