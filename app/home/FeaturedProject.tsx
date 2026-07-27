@@ -22,7 +22,7 @@ const posTechs = [
   "TypeScript",
   "Tailwind CSS",
   "Prisma",
-  "PostgreSQL",
+  "MySQL",
 ];
 
 const fixrTechs = [

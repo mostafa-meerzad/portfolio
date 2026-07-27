@@ -43,6 +43,7 @@ import ProjectsList from "@/app/projects/ProductionWork";
 import Header from "./Header";
 import PersonalProjects from "./PersonalProjects";
 import TutorialProjects from "./TutorialProjects";
+import FlagshipProjectsList from "./FlagshipProjects";
 
 const ProjectsPage = () => {
   return (
@@ -53,6 +54,7 @@ const ProjectsPage = () => {
     >
       <Header />
       <ProjectsList />
+      <FlagshipProjectsList />
       <PersonalProjects />
       <TutorialProjects />
     </section>
