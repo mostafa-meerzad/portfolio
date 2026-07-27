@@ -16,6 +16,12 @@ import urlShortenerDesktop from "../assets/urlshortener-desktop.webp";
 import img1 from "../assets/pos-desktop-main.webp";
 import img2 from "../assets/pos-desktop-login.webp";
 import img3 from "../assets/pos-desktop-reports.webp";
+import img4 from "../assets/03a-splash-screen.png";
+import img5 from "../assets/02d-chat-with-bid-card.png";
+import img6 from "../assets/04h-job-post-step1-category.png";
+import img7 from "../assets/04m-homeowner-active-job-completion-requested.png";
+import img8 from "../assets/05b-expert-onboarding-selfie.png";
+import img9 from "../assets/05k-expert-active-job-in-progress.png";
 
 export type ProjectType = {
   name: string;
@@ -142,32 +148,13 @@ const personalProjects: ProjectType[] = [
       "Custom Backend",
     ],
 
-    github: "https://github.com/mostafa-mz-code/movie-flex",
+    github: "https://github.com/mostafa-meerzad/movie-flex",
     preview:
       "https://www.linkedin.com/posts/mostafa-meerzad-a753371b7_reactnative-expo-javascript-ugcPost-7461812493418393600-uhGY?utm_source=share&utm_medium=member_desktop&rcm=ACoAADJqvDkBDeSRqTEnAva7Pvf1fuVpkZC4AEE",
     desktopImg: movieFlexDesktop,
     mobileImg: movieFlexDesktop,
   },
-  // {
-  //   type: "03 · Full Stack · Real-time",
-  //   name: "Chatty",
-  //   description:
-  //     "Real-time chat app with the MERN stack and Socket.io. Auth, scalable messaging, and responsive UI. Built during Coding Samurai internship — focused on performance and security.",
-  //   technologies: [
-  //     "Node.js",
-  //     "React.js",
-  //     "MongoDB",
-  //     "Socket.io",
-  //     "Express.js",
-  //     "axios",
-  //     "Tailwindcss",
-  //   ],
 
-  //   github: "https://github.com/mostafa-meerzad/realtime-chat-app.git",
-  //   preview: "https://realtime-chat-app-r0wc.onrender.com/",
-  //   desktopImg: chattyDesktop,
-  //   mobileImg: chattyMobile,
-  // },
   {
     type: "04 · Frontend · Landing page",
     name: "Space Tourism",
@@ -200,6 +187,7 @@ const personalProjects: ProjectType[] = [
 ];
 
 const posProjectImages = [img1, img2, img3];
+const fixrProjectImages = [img4, img5, img6, img7, img8, img9];
 
 const topProjects: TopProjectType[] = [
   {
@@ -212,9 +200,9 @@ const topProjects: TopProjectType[] = [
   },
   {
     title: "Chatty",
-    desc: "Real-time MERN chat app with Socket.io. Auth, scalable messaging, and responsive UI.",
+    desc: "Real-time MERN chat app with Socket.io. Auth, messaging, and responsive UI.",
     techs: ["MERN", "Socket.io", "JWT"],
-    subtitle: "02 · Personal",
+    subtitle: "02 · Internship Build",
     repo: {
       href: "https://github.com/mostafa-meerzad/realtime-chat-app.git",
       title: "View GitHub",
@@ -228,7 +216,7 @@ const topProjects: TopProjectType[] = [
     title: "Promptopia",
     desc: "Full-stack AI prompt sharing app. Create, manage, and discover high-quality prompts.",
     techs: ["Next.js", "PostgreSQL", "Prisma"],
-    subtitle: "03 · Professional",
+    subtitle: "03 · Course Build",
     repo: {
       href: "https://github.com/mostafa-meerzad/promptopia.git",
       title: "View GitHub",
@@ -240,4 +228,10 @@ const topProjects: TopProjectType[] = [
   },
 ];
 
-export { personalProjects, productionProjects, posProjectImages, topProjects };
+export {
+  personalProjects,
+  productionProjects,
+  posProjectImages,
+  fixrProjectImages,
+  topProjects,
+};
