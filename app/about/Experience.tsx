@@ -124,7 +124,7 @@ const Experience = () => {
         </div>
         <div className={"flex flex-col gap-1"}>
           <span className={"text-muted-foreground text-sm font-courier"}>
-            Oct 2025 – Present · 8 months
+            Oct 2025 – Present · 10 months
           </span>
           <span className={"text-sm text-muted-foreground/60 "}>
             Kabul, Afghanistan
