@@ -198,7 +198,7 @@ const FeaturedProject = () => {
                 "bg-primary/15 text-primary border border-primary/40 w-fit px-4 py-0.5 text-xs rounded-full font-courier"
               }
             >
-              Personal · Solo-built
+              Personal · AI-first · Solo-built
             </div>
             <div
               className={
@@ -216,7 +216,7 @@ const FeaturedProject = () => {
           >
             Reverse-bidding home services marketplace for Kabul. Homeowners post
             jobs, verified experts bid using credits, and zone-aware matching
-            connects the two. Solo-built end to end: NestJS + Prisma API,
+            connects the two. AI-first Solo-built end to end: NestJS + Prisma API,
             Next.js admin panel, and a React Native (Expo) mobile app with OTP
             auth and real-time chat.
           </p>

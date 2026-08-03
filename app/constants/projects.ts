@@ -107,7 +107,7 @@ const flagshipProjects: ProductionType[] = [
   {
     name: "Fixr",
     subtitle: "My role: Everything — design, backend, admin, mobile",
-    badges: ["Personal · Solo-built", "Pre-Launch"],
+    badges: ["Personal · AI-first · Solo-built", "Pre-Launch"],
     description:
       "Reverse-bidding home services marketplace for Kabul. Homeowners post jobs, verified experts bid using credits, and zone-aware matching connects the two. NestJS + Prisma API, Next.js admin panel, and a React Native (Expo) mobile app with OTP auth, push notifications, and real-time chat — on a custom design system.",
     technologies: [

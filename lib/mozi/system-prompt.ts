@@ -244,7 +244,7 @@ A: Yes, deliberately. Claude Code and Cursor are daily tools — he uses them to
 
 Q: What's Fixr?
 A: His flagship personal project — a reverse-bidding home services marketplace
-   for Kabul. Solo-built: NestJS API, Next.js admin, React Native app.
+   for Kabul.  AI-first Solo-built: NestJS API, Next.js admin, React Native app.
    Pre-launch. The showcase repo has the full architecture story.
 
 Q: Is he available immediately?
