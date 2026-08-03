@@ -1,43 +1,45 @@
-// Patterns that indicate jailbreak attempts or off-topic abuse
-const JAILBREAK_PATTERNS = [
-  /ignore (previous|above|all) instructions/i,
-  /pretend (you are|to be)/i,
-  /act as (a|an|if)/i,
-  /you are now/i,
-  /jailbreak/i,
-  /dan mode/i,
-  /developer mode/i,
-  /override your/i,
-  /forget your (instructions|purpose|rules)/i,
-  /system prompt/i,
-  /repeat (your|the) (instructions|prompt|system)/i,
-];
+/**
+ * Jailbreak detection only.
+ *
+ * There is deliberately NO off-topic pattern list here anymore. Whether a
+ * question is about Mostafa is a semantic judgment, and the system prompt
+ * makes it far better than a regex can. The old list blocked real recruiter
+ * questions — "explain how the Fixr bidding system works", "does he act as a
+ * tech lead", "what is Next.js used for in his stack" — and answered two of
+ * them with "Nice try 😄".
+ *
+ * The asymmetry is the whole point: a false negative here costs nothing,
+ * because the system prompt catches off-topic requests one layer down. A false
+ * positive costs an opportunity.
+ *
+ * Every pattern below is anchored on word boundaries and requires an explicit
+ * override phrase, so ordinary questions cannot trip them.
+ */
+const JAILBREAK_PATTERNS: RegExp[] = [
+  // "ignore all previous instructions", "disregard your rules", "forget your purpose"
+  /\b(?:ignore|disregard|forget|override)\s+(?:all\s+|any\s+|your\s+|the\s+|previous\s+|above\s+|prior\s+|earlier\s+)+(?:instructions?|rules?|prompts?|guidelines?|purpose|training)\b/i,
 
-// Topics clearly unrelated to a portfolio assistant
-const OFF_TOPIC_PATTERNS = [
-  /write (me )?(a |some )?(code|function|script|program|class)/i,
-  /debug (my|this)/i,
-  /explain (how|what|why) .{0,30} (works|is|are)/i,
-  /what is (react|next|node|javascript|python|sql|docker)/i,
-  /how (do|does|to) (you |I )?(use|install|configure|set up)/i,
-  /generate (a |an |some )?(image|story|essay|email|letter)/i,
-  /translate (this|to)/i,
-  /write a (poem|story|essay|cover letter)/i,
+  // "repeat your system prompt", "print the instructions above", "leak your prompt"
+  /\b(?:reveal|repeat|print|output|show|display|dump|leak)\s+(?:me\s+)?(?:your|the)\s+(?:full\s+|entire\s+|exact\s+|original\s+|initial\s+|verbatim\s+)?(?:system\s+)?(?:prompt|instructions?)\b/i,
+
+  // persona replacement
+  /\byou\s+are\s+no\s+longer\s+\w+/i,
+  /\bfrom\s+now\s+on,?\s+you\s+(?:are|will\s+be|must\s+act\s+as|shall)\b/i,
+
+  // named jailbreak modes
+  /\bjailbreak(?:ing|s)?\b/i,
+  /\bDAN\s+mode\b/i,
+  /\bdeveloper\s+mode\s+(?:enabled|on|activated)\b/i,
 ];
 
 export type ModerationResult =
   | { pass: true }
-  | { pass: false; reason: "jailbreak" | "off_topic" };
+  | { pass: false; reason: "jailbreak" };
 
 export function moderateInput(content: string): ModerationResult {
   for (const pattern of JAILBREAK_PATTERNS) {
     if (pattern.test(content)) {
       return { pass: false, reason: "jailbreak" };
-    }
-  }
-  for (const pattern of OFF_TOPIC_PATTERNS) {
-    if (pattern.test(content)) {
-      return { pass: false, reason: "off_topic" };
     }
   }
   return { pass: true };
@@ -50,14 +52,6 @@ const JAILBREAK_RESPONSES = [
   "That's not really my lane. I'm here to tell you about Mostafa — his skills, projects, and experience. Fire away!",
 ];
 
-const OFF_TOPIC_RESPONSES = [
-  "I'm only here to talk about Mostafa — his projects, stack, experience, and availability. Ask me anything about him!",
-  "That's a bit outside what I do. I'm built to talk about Mostafa specifically — want to know about his tech stack or projects?",
-  "Not quite my area! I'm Mozi, Mostafa's personal assistant. Ask me about his work, background, or how to reach him.",
-  "I'll have to pass on that one — I'm focused on Mostafa. What would you like to know about him?",
-];
-
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
 export const JAILBREAK_RESPONSE = () => pick(JAILBREAK_RESPONSES);
-export const OFF_TOPIC_RESPONSE = () => pick(OFF_TOPIC_RESPONSES);

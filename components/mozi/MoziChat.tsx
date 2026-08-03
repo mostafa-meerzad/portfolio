@@ -3,8 +3,17 @@ import { useVisitorId } from "@/hooks/use-visitor-id";
 import { useEffect, useRef, useState } from "react";
 import MoziInput from "./MoziInput";
 import MoziMessage from "./MoziMessage";
+import { GREETING_CONTENT } from "@/lib/mozi/greeting";
 
 interface Message {
+  id: string;
+  role: "user" | "assistant";
+  content: string;
+  /** Transport/system notes render muted so they don't read as Mozi speaking. */
+  variant?: "default" | "system";
+}
+
+interface HistoryMessage {
   id: string;
   role: "user" | "assistant";
   content: string;
@@ -13,8 +22,7 @@ interface Message {
 const GREETING: Message = {
   id: "greeting",
   role: "assistant",
-  content:
-    "Hey, I'm Mozi ✦ Ask me anything about Mostafa's work, stack, experience, or availability.",
+  content: GREETING_CONTENT,
 };
 
 export default function MoziChat() {
@@ -29,12 +37,14 @@ export default function MoziChat() {
 
     async function loadHistory() {
       try {
-        const res = await fetch(`/api/chat/history?visitorId=${visitorId}`);
+        const res = await fetch(
+          `/api/chat/history?visitorId=${encodeURIComponent(visitorId!)}`,
+        );
         const data = await res.json();
-        if (data.messages && data.messages.length > 0) {
+        if (Array.isArray(data.messages) && data.messages.length > 0) {
           setMessages([
             GREETING,
-            ...data.messages.map((m) => ({
+            ...data.messages.map((m: HistoryMessage) => ({
               id: m.id,
               role: m.role,
               content: m.content,
@@ -77,20 +87,30 @@ export default function MoziChat() {
 
       const data = await res.json();
 
-      const assistantMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        role: "assistant",
-        content: data.reply ?? data.error ?? "Something went wrong. Try again.",
-      };
+      // A server error is not Mozi talking. Render it as a system note so a
+      // visitor never mistakes a 500 for the assistant's personality.
+      const isSystemNote = !data.reply;
 
-      setMessages((prev) => [...prev, assistantMessage]);
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: (Date.now() + 1).toString(),
+          role: "assistant",
+          content:
+            data.reply ??
+            data.error ??
+            "That didn't go through. Try sending it again.",
+          variant: isSystemNote ? "system" : "default",
+        },
+      ]);
     } catch {
       setMessages((prev) => [
         ...prev,
         {
           id: (Date.now() + 1).toString(),
           role: "assistant",
-          content: "Connection error. Please try again.",
+          content: "Lost the connection. Check your network and send again.",
+          variant: "system",
         },
       ]);
     } finally {
@@ -102,7 +122,12 @@ export default function MoziChat() {
     <div className="flex flex-col h-full ">
       <div className="flex-1 overflow-y-auto p-4 space-y-3 scrollbar-thin scrollbar-thumb-white/10 custom-scrollbar">
         {messages.map((msg) => (
-          <MoziMessage key={msg.id} role={msg.role} content={msg.content} />
+          <MoziMessage
+            key={msg.id}
+            role={msg.role}
+            content={msg.content}
+            variant={msg.variant}
+          />
         ))}
 
         {isLoading && (
